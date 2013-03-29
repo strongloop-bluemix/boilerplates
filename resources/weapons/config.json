@@ -1,0 +1,7 @@
+{
+  "resource": "Collection",
+  "db": "inventory-db", // special property exposed by Collection, requires the service path to an `instanceof DatabaseService`.
+  "options": {
+    "name": "products"
+  }
+}
