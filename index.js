@@ -5,11 +5,7 @@ var app = asteroid();
 app.init(function (err) {
   if(err) throw err;
   
-  app.use(asteroid.modules);
-  app.use(asteroid.auth);
-  app.use(asteroid.errors);
-  
-  app.listen(3000);
+  app.listen(app.config.port || process.env.PORT || 3000);
 });
 
 
