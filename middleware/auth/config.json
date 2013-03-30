@@ -1,0 +1,7 @@
+{
+  "middleware": "auth-middleware",
+  "auth": "oauth-service",
+  "options": {
+    "oauth": "configuration ..."
+  }
+}

@@ -1,3 +1,3 @@
 {
-  
+  "name": "asteroid-sample-app"
 }
