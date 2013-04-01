@@ -5,8 +5,5 @@ var app = asteroid();
 app.init(function (err) {
   if(err) throw err;
   
-  app.listen(app.config.port || process.env.PORT || 3000);
+  app.listen(process.env.PORT || app.config.port || 3000);
 });
-
-
-
