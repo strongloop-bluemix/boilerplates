@@ -1,5 +1,5 @@
 {
-  "resource": "DataView",
+  "module": "data-view",
   "db": "inventory-db",
   "procedure": "findAvailableProductsByCity"
 }

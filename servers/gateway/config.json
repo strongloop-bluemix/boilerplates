@@ -1,5 +1,5 @@
 {
-  "server": "gateway-server",
+  "module": "gateway-server",
   "options": {
     "proxies": "resource",
     "host": "api.blackpool.com",
