@@ -1,6 +1,8 @@
 {
   "module": "auth-middleware",
-  "auth": "oauth-service",
+  "dependencies": {
+    "auth": "oauth-service"
+  },
   "options": {
     "oauth": "configuration ..."
   }

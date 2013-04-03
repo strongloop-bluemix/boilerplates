@@ -1,6 +1,8 @@
 {
   "module": "collection",
-  "db": "inventory-db", // special property exposed by Collection, requires the service path to an `instanceof DatabaseService`.
+  "dependencies": {
+    "db": "inventory-db"
+  },
   "options": {
     "name": "products"
   }
