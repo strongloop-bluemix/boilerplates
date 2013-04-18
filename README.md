@@ -22,8 +22,14 @@ Currently I have to make reservations from my laptop. Since my battalion is alwa
  - `/weapons/nearby?&lat=...&long=... or ?zip=...` returns a filtered set of available weapons nearby the requesting user
  - `/weapons/nearby?id=24&zip=94555` returns nearby weapons of id 24.
  - `/weapons/:id` returns a specific weapon from the inventory, with specific pricing and images
+ 
+[Here are some sample usages of these APIs](sample-api-usage.md)
 
 ### Infrastructure
+
+#### Customer Database
+
+All customer information is available from the SalesForce api.
 
 #### Inventory Database
 

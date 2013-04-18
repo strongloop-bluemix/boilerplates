@@ -3,5 +3,7 @@
   "dependencies": {
     "db": "inventory-db"
   },
-  "procedure": "findAvailableProductsByCity"
+  "options": {
+    "procedure": "findAvailableProductsByCity"
+  }
 }

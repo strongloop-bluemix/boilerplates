@@ -1,11 +1,13 @@
 {
   "module": "gateway-server",
   "options": {
-    "proxies": "resource",
     "host": "api.blackpool.com",
     "port": 80,
     "middleware": [
       "auth"
     ]
+  },
+  "dependencies": {
+    "proxies": "resource"
   }
 }
