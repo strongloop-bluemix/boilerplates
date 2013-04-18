@@ -1,9 +1,0 @@
-{
-  "module": "collection",
-  "dependencies": {
-    "db": "inventory-db"
-  },
-  "options": {
-    "name": "products"
-  }
-}

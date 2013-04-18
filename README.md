@@ -33,7 +33,7 @@ All customer information is available from the SalesForce api.
 
 #### Inventory Database
 
-All weapon inventory is stored in an existing Oracle X3-8 Exadata Database Machine in an extremely secure location.
+All weapon inventory is already available in an **existing** Oracle X3-8 Exadata Database Machine in an extremely secure location.
 
 The Inventory DB schema looks like this:
 
@@ -68,13 +68,15 @@ The Inventory DB schema looks like this:
  - address
  - name
 
-##### **findAvailableProductsByCity**
+##### **Inventory**
 
-Stored procedure to return qty of available products for the given city.
+**View** to return qty of available products for the given city.
 
-Arguments: `City`, optional `Product ID`.
+ - product_id
+ - product_name
+ - qty_in_stock
+ - city
 
 #### Geo Lookup
 
 Google's location API is used to return the users city from a given zip or lat/long.
-

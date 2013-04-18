@@ -1,0 +1,6 @@
+{
+  "module": "user-model",
+  "dependencies": {
+    "data-source": "../../inventory-db"
+  }
+}
