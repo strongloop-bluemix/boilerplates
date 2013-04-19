@@ -68,14 +68,13 @@ The Inventory DB schema looks like this:
  - address
  - name
 
-##### **Inventory**
+##### **Inventory_View**
 
 **View** to return qty of available products for the given city.
 
- - product_id
- - product_name
- - qty_in_stock
- - city
+ - product (product name)
+ - location (location name)
+ - available (qty available)
 
 #### Geo Lookup
 
