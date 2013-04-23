@@ -1,7 +1,6 @@
 {
   "module": "model",
   "options": {
-    // idea
     "methods": {
       "lookup": {
         "type": "http",
