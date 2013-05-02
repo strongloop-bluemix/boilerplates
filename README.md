@@ -27,6 +27,8 @@ Once I find the weapon I want to reserve I should be able to select it and enter
  - `/weapons/nearby?&lat=...&long=... or ?zip=...` returns a filtered set of available weapons nearby the requesting user
  - `/weapons/nearby?id=24&zip=94555` returns nearby weapons of id 24.
  - `/weapons/:id` returns a specific weapon from the inventory, with specific pricing and images
+ - `/users/login` allows a customer to login
+ - `/users/logout` allows a customer to logout
 
 [Here are some sample usages of the REST APIs](sample-api-usage.md)
 
@@ -45,7 +47,7 @@ _get weapons nearby_
 
     // custom `nearby` function
     Weapon.nearby(here, function (err, weapons) {
-      console.log(weapons); // [...list or nearby weapons...]
+      console.log(weapons); // [...list of nearby weapons...]
     });
     
 **RentalLocation** _inherits from Location (which is an AsteroidObject)_
