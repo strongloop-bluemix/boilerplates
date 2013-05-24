@@ -2,7 +2,7 @@
 
 ### BlackPool Surplus Rentals Corp
 
-BlackPool is an (imaginary) military equipment rental dealer with outlets in major cities accross the globe. They need to replace their existing desktop reservation system with a new mobile app.
+BlackPool is an (imaginary) military equipment rental dealer with gun stores outlets in major cities around the world. They need to replace their existing desktop reservation system with a new mobile app.
 
 ### What is the end user experience?
 
@@ -123,6 +123,8 @@ The Inventory DB schema looks like this:
 ##### **Location**
  - location_id
  - address
+ - city
+ - state
  - name
 
 ##### **Inventory_View**

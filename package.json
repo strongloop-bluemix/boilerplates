@@ -1,0 +1,17 @@
+{
+  "name": "asteroid-sample-app",
+  "version": "0.0.0",
+  "description": "sample asteroid application",
+  "main": "app.js",
+  "dependencies": {
+    "asteroid": "git+ssh://git@github.com/strongloop/asteroid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/asteroid-sample-app.git"
+  },
+  "author": "",
+  "private": true,
+  "gitHead": "01f1f7930e7d1816b9f14b671f7de15a9426e95c",
+  "readmeFilename": "README.md"
+}
