@@ -4,7 +4,8 @@
   "description": "sample asteroid application",
   "main": "app.js",
   "dependencies": {
-    "asteroid": "git+ssh://git@github.com/strongloop/asteroid"
+    "asteroid": "git+ssh://git@github.com/strongloop/asteroid.git",
+    "jugglingdb-oracle": "git+ssh://git@github.com/strongloop/jugglingdb-oracle.git"
   },
   "repository": {
     "type": "git",
