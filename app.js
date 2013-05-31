@@ -1,83 +1,80 @@
 var asteroid = require('asteroid');
 var app = asteroid();
-var request = require('request');
-// var TaskEmitter = require('sl-task-emitter');
 
 // expose models over rest
 app.use(asteroid.rest());
 
 // define a data source
-var dataSource = app.dataSource('db', {
-  adapter: require('jugglingdb-oracle'),
-  host: '127.0.0.1',
-  database: 'XE',
-  username: 'strongloop',
-  password: 'password',
-  debug: false
+app.dataSource('db', {adapter: 'memory'});
+
+// define models
+var RentalLocation = app.model('location', {
+  address: String,
+  zip: Number,
+  city: String,
+  state: String,
+  name: String
 });
 
-dataSource.discoverSchema(null, 'INVENTORY_VIEW', function (err, schema) {
-  schema.options.plural = 'inventory';
-  var Inventory = app.model('inventory', schema.properties, schema.options);
-  Inventory.dataSource('db');
+// attach to the db DataSource
+RentalLocation.dataSource('db');
+
+var Weapon = app.model('weapon', {
+  name: String,
+  product: Number,
+  audibleRange: Number,
+  effectiveRange: Number,
+  rounds: Number,
+  extras: String,
+  fireModes: String
 });
 
-dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
-  var RentalLocation = app.model('location', schema.properties, schema.options);
-  RentalLocation.nearby = function (lat, long, fn) {
-    RentalLocation.all(function (err, locations) {
-      var te = new TaskEmitter();
-      var result = [];
-      
-      locations.forEach(function (loc) {
-        te.task('geocode', geocode);
-      });
-      
-      te
-        .on('geocode', function (loc) {
-          result.push(loc)
-        })
-        .on('error', fn)
-        .on('done', function () {
-          fn(null, sortedLocations.sort(sortByDistanceTo({lat: lat, long: long})));
-        });
-    });
-    fn();
-  };
-  RentalLocation.nearby.shared = true;
-  RentalLocation.nearby.accepts = [
-    {arg: 'lat', type: 'number', required: true},
-    {arg: 'long', type: 'number', required: true}
-  ];
-  RentalLocation.dataSource('db');
+Weapon.nearby = function (lat, long, fn) {
+  // TODO ~ replace this with geo lookup
+  Weapon.all(fn);
+};
+Weapon.nearby.shared = true;
+Weapon.nearby.accepts = [
+  {arg: 'lat', type: 'number', required: true},
+  {arg: 'long', type: 'number', required: true}
+];
+
+// attach to the db DataSource
+Weapon.dataSource('db');
+
+// relationships
+RentalLocation.hasMany(Weapon);
+
+Weapon.destroyAll();
+RentalLocation.destroyAll();
+
+// create test data
+RentalLocation.create({
+  address: '360 El Camino Real',
+  zip: 94066,
+  city: 'San Mateo',
+  state: 'CA',
+  name: 'Peninsula Guns and Tactical'
+}, function (err, loc) {
+  if(err) throw err;
   
-  RentalLocation.distanceTo = function (loc) {
-    
-  }
-});
-
-function geocode(location, fn) {
-  var address = [loc.street, loc.city, loc.zipcode].join(',+');
-  var url = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=' + address;
-
-  request(url, {json: true}, function (err, res, body) {
-    if(body && body.results) {
-      fn(null, body.results[0].geometry.location);
-    } else {
-      fn(new Error('could not find location'));
-    }
+  loc.weapons.create({
+    name: 'DMR',
+    audibleRange: 180,
+    effectiveRange: 800,
+    rounds: 20,
+    extras: 'Scope',
+    fireModes: 'Single'
   });
-}
 
-function sortByDistanceTo(origin) {
-  return function (locA, locB) {
-
-  }
-}
-
-dataSource.discoverSchema(null, 'PRODUCT', function (err, schema) {
-  var Weapon = app.model('weapon', schema.properties, schema.options);
-  Weapon.dataSource('db');
+  loc.weapons.create({
+    name: 'G36C-SD',
+    audibleRange: 10,
+    effectiveRange: 800,
+    rounds: 30,
+    extras: 'Aimpoint sight',
+    fireModes: 'Single, Burst, Full auto'
+  });
 });
 
 // start the server
