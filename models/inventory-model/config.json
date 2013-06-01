@@ -1,9 +1,0 @@
-{
-  "module": "model",
-  "options": {
-    
-  },
-  "dependencies": {
-    "data-source": "../../data-sources/inventory-db"
-  }
-}

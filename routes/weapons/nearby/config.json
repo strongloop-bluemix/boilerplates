@@ -1,9 +1,0 @@
-{
-  "module": "data-view",
-  "dependencies": {
-    "db": "inventory-db"
-  },
-  "options": {
-    "procedure": "findAvailableProductsByCity"
-  }
-}

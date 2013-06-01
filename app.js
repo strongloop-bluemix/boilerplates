@@ -35,14 +35,13 @@ dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
       
       te
         .on('geocode', function (loc) {
-          result.push(loc)
+          result.push(loc);
         })
         .on('error', fn)
         .on('done', function () {
           fn(null, sortedLocations.sort(sortByDistanceTo({lat: lat, long: long})));
         });
     });
-    fn();
   };
   RentalLocation.nearby.shared = true;
   RentalLocation.nearby.accepts = [
@@ -51,8 +50,8 @@ dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
   ];
   RentalLocation.dataSource('db');
   
-  RentalLocation.distanceTo = function (loc) {
-    
+  RentalLocation.prototype.distanceTo = function (loc) {
+    return 0;
   }
 });
 
@@ -71,7 +70,7 @@ function geocode(location, fn) {
 
 function sortByDistanceTo(origin) {
   return function (locA, locB) {
-
+    return origin.distanceTo(locA) > origin.distanceTo(locB) ? 1 : -1; 
   }
 }
 

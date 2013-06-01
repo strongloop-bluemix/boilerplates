@@ -5,7 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "asteroid": "git+ssh://git@github.com/strongloop/asteroid.git",
-    "jugglingdb-oracle": "git+ssh://git@github.com/strongloop/jugglingdb-oracle.git"
+    "jugglingdb-oracle": "git+ssh://git@github.com/strongloop/jugglingdb-oracle.git",
+    "request": "~2.21.0",
+    "sl-task-emitter": "0.0.2"
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,0 @@
-{
-  "module": "model-route",
-  "dependencies": {
-    "model": "../../models/inventory"
-  },
-  "options": {
-    "path": "/weapons"
-  }
-}
