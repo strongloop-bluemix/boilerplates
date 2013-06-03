@@ -1,7 +1,7 @@
 var asteroid = require('asteroid');
 var app = asteroid();
 var request = require('request');
-// var TaskEmitter = require('sl-task-emitter');
+var TaskEmitter = require('sl-task-emitter');
 
 // expose models over rest
 app.use(asteroid.rest());
@@ -23,6 +23,7 @@ dataSource.discoverSchema(null, 'INVENTORY_VIEW', function (err, schema) {
 });
 
 dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
+  
   var RentalLocation = app.model('location', schema.properties, schema.options);
   RentalLocation.nearby = function (lat, long, fn) {
     RentalLocation.all(function (err, locations) {
@@ -30,16 +31,16 @@ dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
       var result = [];
       
       locations.forEach(function (loc) {
-        te.task('geocode', geocode);
+        te.task('geocode', geocode, loc);
       });
-      
+       
       te
         .on('geocode', function (loc) {
           result.push(loc);
         })
         .on('error', fn)
         .on('done', function () {
-          fn(null, sortedLocations.sort(sortByDistanceTo({lat: lat, long: long})));
+          fn(null, result.sort(sortByDistanceTo(lat, long)));
         });
     });
   };
@@ -50,34 +51,46 @@ dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
   ];
   RentalLocation.dataSource('db');
   
-  RentalLocation.prototype.distanceTo = function (loc) {
-    return 0;
+  RentalLocation.prototype.distanceTo = function (lat, long) {
+    var xs = 0;
+    var ys = 0;
+    xs = this.lat - lat;
+    xs = xs * xs;
+    ys = this.long - long;
+    ys = ys * ys;
+    
+    return Math.sqrt( xs + ys );
   }
 });
 
-function geocode(location, fn) {
+dataSource.discoverSchema(null, 'PRODUCT', function (err, schema) {
+  var Weapon = app.model('weapon', schema.properties, schema.options);
+  Weapon.dataSource('db');
+});
+
+function geocode(loc, fn) {
   var address = [loc.street, loc.city, loc.zipcode].join(',+');
   var url = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=' + address;
 
   request(url, {json: true}, function (err, res, body) {
     if(body && body.results) {
-      fn(null, body.results[0].geometry.location);
+      var geo = body.results[0].geometry.location;
+      
+      loc.lat = geo.lat;
+      loc.long = geo.lng;
+      
+      fn(null);
     } else {
       fn(new Error('could not find location'));
     }
   });
 }
 
-function sortByDistanceTo(origin) {
+function sortByDistanceTo(lat, long) {
   return function (locA, locB) {
-    return origin.distanceTo(locA) > origin.distanceTo(locB) ? 1 : -1; 
+    return locA.distanceTo(lat, long) > locB.distanceTo(lat, long) ? 1 : -1; 
   }
 }
-
-dataSource.discoverSchema(null, 'PRODUCT', function (err, schema) {
-  var Weapon = app.model('weapon', schema.properties, schema.options);
-  Weapon.dataSource('db');
-});
 
 // start the server
 app.listen(3000);

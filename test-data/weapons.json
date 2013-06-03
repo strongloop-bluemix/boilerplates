@@ -3,7 +3,10 @@
     "title": "G17",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "52.8m, 0.1m",
+    "audibleRange": [
+      52.8,
+      0.1
+    ],
     "effectiveRange": 75,
     "rounds": [
       15,
@@ -35,7 +38,10 @@
     "title": "M9",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "52.8m, 0.1m",
+    "audibleRange": [
+      52.8,
+      0.1
+    ],
     "effectiveRange": 75,
     "rounds": 15,
     "fireModes": "Single",
@@ -63,7 +69,10 @@
     "title": "Makarov SD",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "0.1m, 52.8m",
+    "audibleRange": [
+      0.1,
+      52.8
+    ],
     "effectiveRange": 50,
     "rounds": 8,
     "fireModes": "Single",
@@ -78,7 +87,10 @@
     "title": "PDW",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "52.8m, 0.1m",
+    "audibleRange": [
+      52.8,
+      0.1
+    ],
     "effectiveRange": 75,
     "rounds": [
       30,
@@ -104,7 +116,10 @@
     "title": "Makarov PM",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "52.8m, 0.1m",
+    "audibleRange": [
+      52.8,
+      0.1
+    ],
     "effectiveRange": 50,
     "rounds": 8,
     "fireModes": "Single",
@@ -126,7 +141,10 @@
       6
     ],
     "audibleRange": 90,
-    "effectiveRange": "250m, 40m",
+    "effectiveRange": [
+      250,
+      40
+    ],
     "rounds": 2,
     "fireModes": "Single",
     "slot": "Primary",
@@ -159,7 +177,10 @@
       6
     ],
     "audibleRange": 90,
-    "effectiveRange": "250m, 40m",
+    "effectiveRange": [
+      250,
+      40
+    ],
     "rounds": 8,
     "extras": "Flashlight",
     "fireModes": "Single",
@@ -237,7 +258,10 @@
     "title": "MP5A5",
     "damage": 889,
     "rawDamage": 4,
-    "audibleRange": "52.8m, 0.1m",
+    "audibleRange": [
+      52.8,
+      0.1
+    ],
     "effectiveRange": 100,
     "rounds": [
       30,
@@ -269,7 +293,10 @@
       7,
       8
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": "Kobra sight",
@@ -296,8 +323,14 @@
       8,
       12
     ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": "400m, 0m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
+    "effectiveRange": [
+      400,
+      0
+    ],
     "rounds": [
       30,
       1
@@ -327,7 +360,10 @@
       8,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": [
       30,
@@ -360,7 +396,10 @@
       7,
       8
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 600,
     "rounds": 30,
     "extras": "Scope",
@@ -447,7 +486,10 @@
       6
     ],
     "audibleRange": 90,
-    "effectiveRange": "250m, 40m",
+    "effectiveRange": [
+      250,
+      40
+    ],
     "rounds": 8,
     "fireModes": "Single",
     "slot": "Primary",
@@ -483,7 +525,10 @@
       7,
       8
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": "Scope",
@@ -543,7 +588,10 @@
       8,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": [
       30,
@@ -591,7 +639,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": [
@@ -637,7 +688,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "fireModes": [
@@ -687,7 +741,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": [
@@ -718,7 +775,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "fireModes": [
@@ -745,7 +805,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": [
@@ -796,7 +859,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "extras": [
@@ -829,7 +895,10 @@
       7,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 600,
     "rounds": [
       30,
@@ -865,7 +934,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "extras": "SUSAT optical scope",
@@ -891,7 +963,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": 30,
     "fireModes": [
@@ -915,10 +990,18 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
-    "extras": "Thermal scope, NV scope, Laser sight, Variable zoom",
+    "extras": [
+      "Thermal scope",
+      "NV scope",
+      "Laser sight",
+      "Variable zoom"
+    ],
     "fireModes": [
       "Single",
       "Full auto"
@@ -940,7 +1023,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "extras": "Holographic sight",
@@ -978,7 +1064,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 600,
     "rounds": 30,
     "extras": "ACOG scope",
@@ -1003,7 +1092,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "fireModes": [
@@ -1029,7 +1121,10 @@
       7,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": [
       30,
@@ -1063,7 +1158,10 @@
       7,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": [
       30,
@@ -1098,7 +1196,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "extras": "Aimpoint sight",
@@ -1144,7 +1245,10 @@
       7,
       12
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 600,
     "rounds": [
       30,
@@ -1180,7 +1284,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": 30,
     "extras": [
@@ -1208,7 +1315,10 @@
       7,
       8
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": [
       30,
@@ -1457,7 +1567,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 400,
     "rounds": [
       100,
@@ -1530,7 +1643,10 @@
       8,
       7
     ],
-    "audibleRange": "80m, 0.35m",
+    "audibleRange": [
+      80,
+      0.35
+    ],
     "effectiveRange": 300,
     "rounds": [
       200,
@@ -1633,248 +1749,6 @@
     "source": "Military"
   },
   {
-    "title": "M9 Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 52.8,
-    "rounds": 15,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "M9",
-      "G17",
-      "PDW"
-    ]
-  },
-  {
-    "title": "M9SD Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "rounds": 15,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "M9",
-      "M9 SD"
-    ]
-  },
-  {
-    "title": "G17 Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 52.8,
-    "rounds": 17,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "G17",
-      "PDW",
-      "MP5A5"
-    ]
-  },
-  {
-    "title": "M1911 Mag.",
-    "damage": 1389,
-    "rawDamage": 5,
-    "audibleRange": 52.8,
-    "rounds": 7,
-    "convertsTo": ".45 ACP",
-    "slot": "Sidearm ammo",
-    "usedIn": "M1911"
-  },
-  {
-    "title": "M1911",
-    "damage": 1389,
-    "rawDamage": 5,
-    "audibleRange": 52.8,
-    "effectiveRange": 50,
-    "rounds": 7,
-    "fireModes": "Single",
-    "slot": "Sidearm",
-    "magazines": "M1911 Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "M1911",
-    "damage": 1389,
-    "rawDamage": 5,
-    "audibleRange": 52.8,
-    "effectiveRange": 50,
-    "rounds": 7,
-    "fireModes": "Single",
-    "slot": "Sidearm",
-    "magazines": "M1911 Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "Makarov Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 52.8,
-    "rounds": 8,
-    "slot": "Sidearm Ammo",
-    "usedIn": [
-      "Makarov PM",
-      "Makarov SD"
-    ]
-  },
-  {
-    "title": "PDW Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 52.8,
-    "rounds": 30,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "PDW",
-      "MP5A5"
-    ]
-  },
-  {
-    "title": "MP5 Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 52.8,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "MP5A5",
-      "PDW"
-    ]
-  },
-  {
-    "title": "MakarovSD Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "rounds": 8,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "Makarov SD",
-      "Makarov PM"
-    ],
-    "source": "Namalsk"
-  },
-  {
-    "title": "2Rnd. Slugs",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 90,
-    "rounds": 2,
-    "convertsTo": "8Rnd. Slugs",
-    "slot": "Main inventory",
-    "usedIn": "Double-barreled Shotgun"
-  },
-  {
-    "title": "2Rnd. Pellets",
-    "damage": 2000,
-    "rawDamage": 6,
-    "audibleRange": 90,
-    "rounds": 2,
-    "convertsTo": "8Rnd. Pellets",
-    "slot": "Main inventory",
-    "usedIn": "Double-barreled Shotgun"
-  },
-  {
-    "title": "MP5SD Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "MP5A5",
-      "MP5SD6",
-      "PDW"
-    ]
-  },
-  {
-    "title": "8Rnd. Saiga 12K Slug",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 90,
-    "rounds": 8,
-    "slot": "Main inventory",
-    "usedIn": "Saiga 12K",
-    "source": "Namalsk"
-  },
-  {
-    "title": "8Rnd. Slugs",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 90,
-    "rounds": 8,
-    "convertsTo": "2Rnd. Slugs",
-    "slot": "Main inventory",
-    "usedIn": [
-      "M1014",
-      "Remington 870 (Flashlight)"
-    ]
-  },
-  {
-    "title": "8Rnd. Pellets",
-    "damage": 2000,
-    "rawDamage": 6,
-    "audibleRange": 90,
-    "rounds": 8,
-    "convertsTo": "2Rnd. Pellets",
-    "slot": "Main inventory",
-    "usedIn": [
-      "M1014",
-      "Remington 870 (Flashlight)"
-    ]
-  },
-  {
-    "title": "Winchester 1866",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 125,
-    "effectiveRange": 150,
-    "rounds": 15,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "15Rnd. 1866 Slugs",
-    "source": "Common"
-  },
-  {
-    "title": "15Rnd. 1866 Slugs",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 125,
-    "rounds": 15,
-    "slot": "Main inventory",
-    "usedIn": "Winchester 1866"
-  },
-  {
-    "title": ".45 ACP",
-    "damage": 1389,
-    "rawDamage": 5,
-    "audibleRange": 52.8,
-    "rounds": 6,
-    "convertsTo": "M1911 Mag.",
-    "slot": "Sidearm ammo",
-    "usedIn": "Revolver"
-  },
-  {
-    "title": "Bizon SD Mag.",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "rounds": 64,
-    "slot": "Main inventory",
-    "usedIn": "Bizon PP-19 SD"
-  },
-  {
-    "title": "Winchester 1866",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 125,
-    "effectiveRange": 150,
-    "rounds": 15,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "15Rnd. 1866 Slugs",
-    "source": "Common"
-  },
-  {
     "title": "30Rnd. AK SD",
     "damage": 3555,
     "rawDamage": 8,
@@ -1882,92 +1756,6 @@
     "rounds": 30,
     "slot": "Main inventory",
     "source": "Namalsk"
-  },
-  {
-    "title": "GP-25 HE",
-    "rawDamage": 12,
-    "rounds": 1,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "AK-74 GP-25",
-      "AK-107 GL",
-      "AK-107 GL PSO"
-    ],
-    "source": "Namalsk"
-  },
-  {
-    "title": "30Rnd. AK",
-    "damage": 2722,
-    "rawDamage": 7,
-    "audibleRange": 80,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "AK-74",
-      "AKS-74 Kobra",
-      "AKS-74U"
-    ]
-  },
-  {
-    "title": "Bizon PP-19 SD",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "effectiveRange": 100,
-    "rounds": 64,
-    "extras": "Silenced",
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": "Bizon SD Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "AKM Mag.",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 149.4,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "AKM",
-      "AKS",
-      "AKS (gold)",
-      "Sa-58P",
-      "Sa-58V",
-      "Sa-58V ACOG",
-      "Sa-58 CCO"
-    ]
-  },
-  {
-    "title": "Bizon PP-19 SD",
-    "damage": 889,
-    "rawDamage": 4,
-    "audibleRange": 0.1,
-    "effectiveRange": 100,
-    "rounds": 64,
-    "extras": "Silenced",
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": "Bizon SD Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "FN FAL Mag.",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 20,
-    "slot": "Main inventory",
-    "usedIn": [
-      "FN FAL",
-      "FN FAL AN/PVS-4"
-    ]
   },
   {
     "title": "30rnd G36 SD",
@@ -1987,268 +1775,6 @@
     "slot": "Main inventory"
   },
   {
-    "title": "30Rnd. STANAG SD",
-    "damage": 2722,
-    "rawDamage": 7,
-    "audibleRange": 0.35,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "M16A2",
-      "M16A2 M203",
-      "M16A4 ACOG",
-      "M4A1",
-      "M4A1 CCO SD",
-      "M4A1 CCO",
-      "M4A1 Holo",
-      "M4A3 CCO",
-      "L85A2 AWS",
-      "M249 SAW",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "30Rnd. STANAG",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 80,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "M16A2",
-      "M16A2 M203",
-      "M16A4 ACOG",
-      "M4A1",
-      "M4A1 CCO",
-      "M4A1 Holo",
-      "M4A3 CCO",
-      "L85A2 AWS",
-      "M249 SAW",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "M203 HE",
-    "damage": 8000,
-    "rawDamage": 12,
-    "rounds": 1,
-    "slot": "Sidearm ammo",
-    "usedIn": [
-      "M16A2 M203",
-      "M4A1 Holo",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "FN FAL",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 400,
-    "rounds": 20,
-    "fireModes": [
-      "Single",
-      "Burst"
-    ],
-    "slot": "Primary",
-    "magazines": "FN FAL Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "M203 Smoke",
-    "rounds": 1,
-    "slot": "Sidearm ammo",
-    "lifetime": "60 secs",
-    "usedIn": [
-      "M16A2 M203",
-      "M4A1 Holo",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "FN FAL",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 400,
-    "rounds": 20,
-    "fireModes": [
-      "Single",
-      "Burst"
-    ],
-    "slot": "Primary",
-    "magazines": "FN FAL Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "M203 Flare White",
-    "rounds": 1,
-    "fireModes": "Sidearm ammo",
-    "lifetime": "60 secs",
-    "usedIn": [
-      "M16A2 M203",
-      "M4A1 Holo",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "M203 Flare Green",
-    "rounds": 1,
-    "slot": "Sidearm ammo",
-    "lifetime": "60 secs",
-    "usedIn": [
-      "M16A2 M203",
-      "M4A1 Holo",
-      "L85A2 ACOG GL"
-    ]
-  },
-  {
-    "title": "L85A2 AWS",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": 30,
-    "extras": "Thermal scope, NV scope, Laser sight, Variable zoom",
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": [
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "Lee Enfield Mag.",
-    "damage": 6722,
-    "rawDamage": 11,
-    "audibleRange": 162,
-    "rounds": 10,
-    "slot": "Main inventory",
-    "usedIn": "Lee Enfield"
-  },
-  {
-    "title": "L85A2 AWS",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": 30,
-    "extras": "Thermal scope, NV scope, Laser sight, Variable zoom",
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": [
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "L85A2 AWS",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": 30,
-    "extras": "Thermal scope, NV scope, Laser sight, Variable zoom",
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": [
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "Lee Enfield",
-    "damage": 6722,
-    "rawDamage": 11,
-    "audibleRange": 162,
-    "effectiveRange": 400,
-    "rounds": 10,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "Lee Enfield Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "Lee Enfield",
-    "damage": 6722,
-    "rawDamage": 11,
-    "audibleRange": 162,
-    "effectiveRange": 400,
-    "rounds": 10,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "Lee Enfield Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "M4A1 CCO SD",
-    "damage": 2722,
-    "rawDamage": 7,
-    "audibleRange": 0.35,
-    "effectiveRange": 200,
-    "rounds": 30,
-    "extras": [
-      "Aimpoint sight",
-      "Silenced"
-    ],
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": "30Rnd. STANAG SD",
-    "source": "Military"
-  },
-  {
-    "title": "M4A1 CCO SD",
-    "damage": 2722,
-    "rawDamage": 7,
-    "audibleRange": 0.35,
-    "effectiveRange": 200,
-    "rounds": 30,
-    "extras": [
-      "Aimpoint sight",
-      "Silenced"
-    ],
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": "30Rnd. STANAG SD",
-    "source": "Military"
-  },
-  {
     "title": "Flashlight",
     "slot": [
       "Sidearm",
@@ -2256,538 +1782,7 @@
     ]
   },
   {
-    "title": "M4A3 CCO",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": 30,
-    "extras": [
-      "Aimpoint sight",
-      "Flashlight"
-    ],
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": [
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Military"
-  },
-  {
-    "title": "75Rnd. RPK",
-    "damage": 2722,
-    "rawDamage": 7,
-    "audibleRange": 80,
-    "rounds": 75,
-    "slot": "Main inventory",
-    "usedIn": "RPK",
-    "source": "Namalsk"
-  },
-  {
-    "title": "M4A3 CCO",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": 30,
-    "extras": [
-      "Aimpoint sight",
-      "Flashlight"
-    ],
-    "fireModes": [
-      "Single",
-      "Full auto"
-    ],
-    "slot": "Primary",
-    "magazines": [
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Military"
-  },
-  {
-    "title": "SA58 Mag.",
-    "damage": 4500,
-    "rawDamage": 9,
-    "audibleRange": 149.4,
-    "rounds": 30,
-    "slot": "Main inventory",
-    "usedIn": [
-      "Sa-58P",
-      "Sa-58V",
-      "Sa-58V ACOG",
-      "Sa-58 CCO",
-      "AKM",
-      "AKS",
-      "AKS (gold)"
-    ]
-  },
-  {
     "title": "NV Goggles",
     "slot": "Optics"
-  },
-  {
-    "title": "ER7 RFW (ammo)",
-    "damage": 49995,
-    "rawDamage": 30,
-    "audibleRange": 180,
-    "rounds": 25,
-    "slot": "Main inventory",
-    "usedIn": "ER7 RFW",
-    "source": "Namalsk"
-  },
-  {
-    "title": "10Rnd. M107",
-    "damage": 37552,
-    "rawDamage": 26,
-    "audibleRange": 455.4,
-    "rounds": 10,
-    "slot": "Main inventory",
-    "usedIn": [
-      "AS50",
-      "M107"
-    ]
-  },
-  {
-    "title": "5Rnd 12.7x99mm NATO",
-    "damage": 174205,
-    "rawDamage": 56,
-    "audibleRange": 455.4,
-    "rounds": 5,
-    "slot": "Main inventory",
-    "usedIn": "AS50"
-  },
-  {
-    "title": "AS50",
-    "damage": [
-      174205,
-      37552
-    ],
-    "rawDamage": [
-      56,
-      26
-    ],
-    "audibleRange": 455.4,
-    "effectiveRange": 1600,
-    "rounds": [
-      5,
-      10
-    ],
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": [
-      "5Rnd 12.7x99mm NATO",
-      "10Rnd. M107"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "AS50",
-    "damage": [
-      174205,
-      37552
-    ],
-    "rawDamage": [
-      56,
-      26
-    ],
-    "audibleRange": 455.4,
-    "effectiveRange": 1600,
-    "rounds": [
-      5,
-      10
-    ],
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": [
-      "5Rnd 12.7x99mm NATO",
-      "10Rnd. M107"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "5RND. KSVK",
-    "damage": 49995,
-    "rawDamage": 30,
-    "audibleRange": 455.4,
-    "rounds": 5,
-    "slot": "Main inventory",
-    "usedIn": "KSVK",
-    "source": "Namalsk"
-  },
-  {
-    "title": "AS50",
-    "damage": [
-      174205,
-      37552
-    ],
-    "rawDamage": [
-      56,
-      26
-    ],
-    "audibleRange": 455.4,
-    "effectiveRange": 1600,
-    "rounds": [
-      5,
-      10
-    ],
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": [
-      "5Rnd 12.7x99mm NATO",
-      "10Rnd. M107"
-    ],
-    "source": "Rare"
-  },
-  {
-    "title": "CZ550 Mag.",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 5,
-    "slot": "Main inventory",
-    "usedIn": "CZ550"
-  },
-  {
-    "title": "DMR Mag.",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 20,
-    "convertsTo": "5Rnd. M24",
-    "slot": "Main inventory",
-    "usedIn": [
-      "DMR",
-      "M14 AIM"
-    ]
-  },
-  {
-    "title": "CZ550",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 800,
-    "rounds": 5,
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "CZ550 Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "DMR",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 800,
-    "rounds": 20,
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "DMR Mag.",
-    "source": "Military"
-  },
-  {
-    "title": "CZ550",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 800,
-    "rounds": 5,
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "CZ550 Mag.",
-    "source": "Common"
-  },
-  {
-    "title": "DMR",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 800,
-    "rounds": 20,
-    "extras": "Scope",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "DMR Mag.",
-    "source": "Military"
-  },
-  {
-    "title": "5Rnd. M24",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 5,
-    "convertsTo": "DMR Mag.",
-    "slot": "Main inventory",
-    "usedIn": "M24"
-  },
-  {
-    "title": "100Rnd. M240",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 100,
-    "slot": "Main inventory",
-    "usedIn": [
-      "M240",
-      "Mk 48 Mod 0"
-    ],
-    "reqSlots": 2
-  },
-  {
-    "title": "M14 AIM",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 500,
-    "rounds": 20,
-    "extras": "Aimpoint sight",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "DMR Mag.",
-    "source": "Military"
-  },
-  {
-    "title": "M14 AIM",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 500,
-    "rounds": 20,
-    "extras": "Aimpoint sight",
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "DMR Mag.",
-    "source": "Military"
-  },
-  {
-    "title": "MG36 Mag.",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 80,
-    "rounds": 100,
-    "slot": "Main inventory",
-    "usedIn": "MG36",
-    "source": "Namalsk",
-    "reqSlots": 2
-  },
-  {
-    "title": "SVD Camo",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 1200,
-    "rounds": 10,
-    "extras": [
-      "Scope",
-      "Camo"
-    ],
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "SVD Dragunov Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "SVD Dragunov Mag.",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 10,
-    "slot": "Main inventory",
-    "usedIn": "SVD Camo"
-  },
-  {
-    "title": "SVD Camo",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 1200,
-    "rounds": 10,
-    "extras": [
-      "Scope",
-      "Camo"
-    ],
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": "SVD Dragunov Mag.",
-    "source": "Rare"
-  },
-  {
-    "title": "PKM Mag.",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "rounds": 100,
-    "slot": "Main inventory",
-    "usedIn": [
-      "PKM",
-      "PKP"
-    ],
-    "reqSlots": 2
-  },
-  {
-    "title": "200Rnd. M249 Belt",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 80,
-    "rounds": 200,
-    "slot": "Main inventory",
-    "usedIn": "M249 SAW",
-    "reqSlots": 2
-  },
-  {
-    "title": "Mk 48 Mod 0",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 400,
-    "rounds": 100,
-    "extras": "Aimpoint sight",
-    "fireModes": "Full auto",
-    "slot": "Primary",
-    "magazines": "100Rnd. M240",
-    "source": "Military"
-  },
-  {
-    "title": "M249 SAW",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": [
-      200,
-      30
-    ],
-    "fireModes": "Full auto",
-    "slot": "Primary",
-    "magazines": [
-      "200Rnd. M249 Belt",
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Military"
-  },
-  {
-    "title": "Mk 48 Mod 0",
-    "damage": 8000,
-    "rawDamage": 12,
-    "audibleRange": 180,
-    "effectiveRange": 400,
-    "rounds": 100,
-    "extras": "Aimpoint sight",
-    "fireModes": "Full auto",
-    "slot": "Primary",
-    "magazines": "100Rnd. M240",
-    "source": "Military"
-  },
-  {
-    "title": "M249 SAW",
-    "damage": [
-      3555,
-      2722
-    ],
-    "rawDamage": [
-      8,
-      7
-    ],
-    "audibleRange": "80m, 0.35m",
-    "effectiveRange": 300,
-    "rounds": [
-      200,
-      30
-    ],
-    "fireModes": "Full auto",
-    "slot": "Primary",
-    "magazines": [
-      "200Rnd. M249 Belt",
-      "30Rnd. STANAG",
-      "30Rnd. STANAG SD"
-    ],
-    "source": "Military"
-  },
-  {
-    "title": "Compound Crossbow",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 3.3,
-    "effectiveRange": 30,
-    "rounds": 1,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": [
-      "Steel Bolt",
-      "Arrow"
-    ],
-    "source": "Common"
-  },
-  {
-    "title": "Steel Bolt",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 3.3,
-    "rounds": 1,
-    "slot": "Main inventory",
-    "usedIn": "Compound Crossbow"
-  },
-  {
-    "title": "Arrow",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 3.3,
-    "rounds": 1,
-    "slot": "Main inventory",
-    "usedIn": "Compound Crossbow"
-  },
-  {
-    "title": "Compound Crossbow",
-    "damage": 3555,
-    "rawDamage": 8,
-    "audibleRange": 3.3,
-    "effectiveRange": 30,
-    "rounds": 1,
-    "fireModes": "Single",
-    "slot": "Primary",
-    "magazines": [
-      "Steel Bolt",
-      "Arrow"
-    ],
-    "source": "Common"
-  },
-  {
-    "title": "M136",
-    "damage": 6234099,
-    "rawDamage": 335,
-    "audibleRange": 160,
-    "rounds": 1,
-    "slot": "Main inventory",
-    "usedIn": "M136 Launcher",
-    "reqSlots": 6
   }
 ]
