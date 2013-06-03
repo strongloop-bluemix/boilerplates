@@ -23,7 +23,6 @@ dataSource.discoverSchema(null, 'INVENTORY_VIEW', function (err, schema) {
 });
 
 dataSource.discoverSchema(null, 'LOCATION', function (err, schema) {
-  
   var RentalLocation = app.model('location', schema.properties, schema.options);
   RentalLocation.nearby = function (lat, long, fn) {
     RentalLocation.all(function (err, locations) {
