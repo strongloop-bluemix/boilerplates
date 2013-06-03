@@ -16,9 +16,8 @@ var dataSource = app.dataSource('db', {
   debug: false
 });
 
-dataSource.discoverSchema(null, 'PRODUCT', function (err, schema) {
-  var Weapon = app.model('weapon', schema.properties, schema.options);
-  Weapon.dataSource('db');
+dataSource.discoverAndBuildModels(null, 'WEAPON', {}, function (err, models) {
+  var Weapon = models.Weapon;
   
   Weapon.destroyAll(function () {
     weapons.forEach(function (obj) {
