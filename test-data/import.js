@@ -13,11 +13,13 @@ var dataSource = app.dataSource('db', {
   database: 'XE',
   username: 'strongloop',
   password: 'password',
-  debug: false
+  debug: true
 });
 
-dataSource.discoverAndBuildModels(null, 'WEAPON', {}, function (err, models) {
-  var Weapon = models.Weapon;
+var i = 1;
+
+dataSource.discoverAndBuildModels(null, 'PRODUCT', {associations: true}, function (err, models) {
+  var Weapon = models.Product;
   
   Weapon.destroyAll(function () {
     weapons.forEach(function (obj) {
@@ -27,7 +29,8 @@ dataSource.discoverAndBuildModels(null, 'WEAPON', {}, function (err, models) {
       delete obj.source;
       delete obj.damage;
       delete obj.rawDamage;
-      console.log(obj);
+      obj.id = i++;
+      
       if(Array.isArray(obj.audibleRange)) obj.audibleRange = obj.audibleRange[0];
       if(Array.isArray(obj.rounds)) obj.rounds = obj.rounds[0];
       if(Array.isArray(obj.fireModes)) obj.fireModes = JSON.stringify(obj.fireModes);
@@ -36,7 +39,7 @@ dataSource.discoverAndBuildModels(null, 'WEAPON', {}, function (err, models) {
     
       Weapon.create(obj, function (err, w) {
         if(err) {
-          console.log(err);
+          console.log(err, w);
         } else {
           console.log('added', w.id);
         }
