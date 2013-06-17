@@ -4,14 +4,24 @@
 
 var asteroid = require('asteroid');
 
-// export the oracle data source
-module.exports = asteroid.createDataSource({
-  adapter: 'oracle',
-  host: '127.0.0.1',
-  database: 'XE',
-  username: 'strongloop',
-  password: 'password',
-  debug: false
-});
-
-var Location = require('../models/location');
+if(process.env.NODE_ENV === 'test') {
+  console.log('-----TEST-----');
+  
+  // use memory adapter
+  module.exports = asteroid.createDataSource({
+    connector: require('asteroid').Memory
+  });
+  
+  // import data
+  require('../test-data/import');
+} else {
+  // export the oracle data source
+  module.exports = asteroid.createDataSource({
+    connector: require('jugglingdb-oracle'),
+    host: '127.0.0.1',
+    database: 'XE',
+    username: 'blackpool',
+    password: 'password',
+    debug: false
+  });
+}
