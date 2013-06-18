@@ -9,12 +9,17 @@
     "request": "~2.21.0",
     "sl-task-emitter": "0.0.2"
   },
+  "devDependencies": {
+    "supertest": "latest"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/strongloop/asteroid-sample-app.git"
   },
-  "author": "",
+  "scripts": {
+    "test": "mocha -b -R spec"
+  },
+  "author": "Ritchie Martori",
   "private": true,
-  "gitHead": "01f1f7930e7d1816b9f14b671f7de15a9426e95c",
   "readmeFilename": "README.md"
 }

@@ -3,7 +3,7 @@
  */
 
 var asteroid = require('asteroid')
-  , app = asteroid()
+  , app = module.exports = asteroid()
   , fs = require('fs')
   , path = require('path')
   , request = require('request')
