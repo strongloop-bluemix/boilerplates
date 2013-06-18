@@ -6,8 +6,8 @@ var oracle = require("../data-sources/oracle");
 var config = require("./location.json");
 var asteroid = require('asteroid');
 var TaskEmitter = require('sl-task-emitter');
-var request = require('request');        
-                                                    
+var rest = require("../data-sources/rest-geocode");
+
 /**                                                 
  * location Model                                     
  */                                                 
@@ -68,12 +68,10 @@ RentalLocation.prototype.distanceTo = function (lat, long) {
 }
 
 function geocode(loc, fn) {
-  var address = [loc.street, loc.city, loc.zipcode].join(',+');
-  var url = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=' + address;
-
-  request(url, {json: true}, function (err, res, body) {
-    if(body && body.results) {
-      var geo = body.results[0].geometry.location;
+  rest.geocode(loc.street, loc.city, loc.zipcode, function (err, res, result) {
+    if(result && result[0]) {
+      var geo = result[0];
+        console.log('Geo: ', geo);
       
       loc.lat = geo.lat;
       loc.long = geo.lng;
