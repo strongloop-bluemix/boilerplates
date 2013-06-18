@@ -3,14 +3,14 @@
  */                                                 
                                                     
 var oracle = require("../data-sources/oracle");     
-var config = require("./product.json");              
+var config = require("./weapon.json");              
                                                     
 /**                                                 
  * product Model                                     
  */                                                 
                                                     
-var product = module.exports = oracle.createModel(   
-  "product",                                         
+var Weapon = module.exports = oracle.createModel(   
+  "weapon",                                         
   config.properties,                                
   config.options                                    
-);                                                  
+);
