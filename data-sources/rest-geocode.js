@@ -1,13 +1,11 @@
-var asteroid = require('asteroid');
+var asteroid = require("asteroid");
 
 module.exports = asteroid.createDataSource({
-    connector: require('asteroid-connector-rest'),
+    connector: require("asteroid-connector-rest"),
     debug: false,
     operations: [
         {
-            name: 'geocode',
-            parameters: ['street', 'city', 'zipcode'],
-            request: {
+            template: {
                 "method": "GET",
                 "url": "http://maps.googleapis.com/maps/api/geocode/{format=json}",
                 "headers": {
@@ -19,6 +17,9 @@ module.exports = asteroid.createDataSource({
                     "sensor": "{sensor=false}"
                 },
                 "responsePath": "$.results[0].geometry.location"
+            },
+            functions: {
+               "geocode": ["street", "city", "zipcode"]
             }
         }
     ]});
