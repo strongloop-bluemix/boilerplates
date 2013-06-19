@@ -12,6 +12,8 @@ var i = 1;
 
 Weapon.destroyAll(function () {
   weapons.forEach(function (obj) {
+
+    debugger;
     obj.name = obj.title;
     delete obj.title;
     delete obj.slot;
@@ -30,7 +32,7 @@ Weapon.destroyAll(function () {
       if(err) {
         console.log(err, w);
       } else {
-        console.log('added', w.id);
+        // console.log('added', w.id);
       }
     });
   });

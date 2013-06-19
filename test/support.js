@@ -1,4 +1,10 @@
 /**
+ * Force Test Mode
+ */
+
+process.env.NODE_ENV = 'test';
+
+/**
  * Utils
  */
 

@@ -4,7 +4,7 @@
                                                     
 var db = require("../data-sources/db");     
 var config = require("./weapon.json");              
-                                                    
+
 /**                                                 
  * product Model                                     
  */                                                 

@@ -3,21 +3,20 @@
  */
 
 var asteroid = require('asteroid');
-var db;
 
 if(process.env.NODE_ENV === 'test') {
   console.log('-----Using Memory Connector-----');
   
   // use memory adapter
-  db = asteroid.createDataSource({
+  module.exports = asteroid.createDataSource({
     connector: require('asteroid').Memory
   });
-  
+
   // import data
   require('../test-data/import');
 } else {
   // export the oracle data source
-  db = asteroid.createDataSource({
+  module.exports = asteroid.createDataSource({
     connector: require('jugglingdb-oracle'),
     host: '127.0.0.1',
     database: 'XE',
@@ -26,5 +25,3 @@ if(process.env.NODE_ENV === 'test') {
     debug: false
   });
 }
-
-module.exports = db;
