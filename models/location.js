@@ -2,7 +2,7 @@
  * Module Dependencies                              
  */                                                 
                                                     
-var oracle = require("../data-sources/oracle");     
+var db = require("../data-sources/db");     
 var config = require("./location.json");
 var asteroid = require('asteroid');
 var TaskEmitter = require('sl-task-emitter');
@@ -12,7 +12,7 @@ var request = require('request');
  * location Model                                     
  */                                                 
                                                     
-var RentalLocation = module.exports = oracle.createModel(   
+var RentalLocation = module.exports = db.createModel(   
   "location",                                         
   config.properties,                                
   config.options                                    

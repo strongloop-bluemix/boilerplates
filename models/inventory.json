@@ -5,7 +5,8 @@
     "oracle": {
       "schema": "BLACKPOOL",
       "table": "INVENTORY"
-    }
+    },
+    "plural": "inventory"
   },
   "properties": {
     "productId": {

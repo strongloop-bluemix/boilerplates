@@ -2,14 +2,14 @@
  * Module Dependencies                              
  */                                                 
                                                     
-var oracle = require("../data-sources/oracle");     
+var db = require("../data-sources/db");     
 var config = require("./inventory.json");              
                                                     
 /**                                                 
  * inventory Model                                     
  */                                                 
                                                     
-var inventory = module.exports = oracle.createModel(   
+var inventory = module.exports = db.createModel(   
   "inventory",                                         
   config.properties,                                
   config.options                                    

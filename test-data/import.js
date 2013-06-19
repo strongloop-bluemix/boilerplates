@@ -5,7 +5,7 @@
 var weapons = require('./weapons.json');
 var asteroid = require('asteroid');
 var app = asteroid();
-var oracle = require('../data-sources/oracle');
+var db = require('../data-sources/db');
 var Weapon = require('../models/weapon');
 
 var i = 1;

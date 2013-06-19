@@ -6,7 +6,7 @@ var weapons = require('./weapons.json');
 var asteroid = require('asteroid');
 var fs = require('fs');
 var path = require('path');
-var oracle = require('../data-sources/oracle');
+var db = require('../data-sources/oracle');
 var modelsDir = path.join(__dirname, '..', 'models');
 
 // tables we care about
@@ -39,14 +39,14 @@ oracle.discoverModelDefinitions(null, function (err, models) {
         ' * Module Dependencies                              ',
         ' */                                                 ',
         '                                                    ',
-        'var oracle = require("../data-sources/oracle");     ',
+        'var db = require("../data-sources/db");     ',
         'var config = require("./{name}.json");              ',
         '                                                    ',
         '/**                                                 ',
         ' * {name} Model                                     ',
         ' */                                                 ',
         '                                                    ',
-        'var {name} = module.exports = oracle.createModel(   ',
+        'var {name} = module.exports = db.createModel(   ',
         '  "{name}",                                         ',
         '  config.properties,                                ',
         '  config.options                                    ',
