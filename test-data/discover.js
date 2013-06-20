@@ -6,7 +6,7 @@ var weapons = require('./weapons.json');
 var asteroid = require('asteroid');
 var fs = require('fs');
 var path = require('path');
-var db = require('../data-sources/oracle');
+var db = require('../data-sources/db');
 var modelsDir = path.join(__dirname, '..', 'models');
 
 // tables we care about
@@ -19,7 +19,7 @@ var include = [
 ];
 
 // discover tables
-oracle.discoverModelDefinitions(null, function (err, models) {
+db.discoverModelDefinitions(function (err, models) {
   if(err) {
     console.log(err);
   } else {
@@ -27,7 +27,7 @@ oracle.discoverModelDefinitions(null, function (err, models) {
       if(~include.indexOf(def.name)) {
         console.log('discovering', def.name);
         
-        oracle.discoverSchema(null, def.name, function (err, schema) {
+        db.discoverSchema(def.name, function (err, schema) {
           fs.writeFileSync(
             path.join(modelsDir, schema.name.toLowerCase() + '.json'),
             JSON.stringify(schema, null, 2)
@@ -53,7 +53,6 @@ oracle.discoverModelDefinitions(null, function (err, models) {
         ');                                                  '];
         
         template = template.join('\n').replace(/\{name\}/g, def.name.toLowerCase());
-        
         fs.writeFileSync(path.join(modelsDir, def.name.toLowerCase() + '.js'), template);
       }
     });
