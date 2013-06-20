@@ -11,8 +11,6 @@ function json(verb, url) {
 }
 
 describe('REST', function(){
-  this.timeout(10000);
-  
   /**
    * Expected Input Tests
    */
