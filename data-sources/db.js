@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === 'test') {
 } else {
   // export the oracle data source
   module.exports = asteroid.createDataSource({
-    connector: require('jugglingdb-oracle'),
+    connector: require('asteroid-connector-oracle'),
     host: '127.0.0.1',
     database: 'XE',
     username: 'blackpool',
