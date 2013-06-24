@@ -81,6 +81,29 @@ describe('REST', function(){
           });
       });
     });
+    
+    describe('GET /locations', function(){
+      it('should return a list of locations', function(done) {
+        json('get', '/locations')
+          .expect(200, function (err, res) {
+            var locations = res.body;
+            assert(Array.isArray(locations));
+            assert.equal(locations.length, testData.locations.length);
+            done();
+          });
+      });
+    });
+    
+    describe('GET /locations/nearby', function(){
+      it('should return a list of locations near given point', function(done) {
+        json('get', '/locations/nearby?here[lat]=10&here[long]=20')
+          .expect(200, function (err, res) {
+            var locations = res.body;
+            assert(Array.isArray(locations));
+            done();
+          });
+      });
+    });
   });
   
   // describe('Unexpected Usage', function(){

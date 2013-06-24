@@ -1,0 +1,25 @@
+[
+
+  {
+    "name": "Bay Area Firearms",
+    "street": "390 Lang Road",
+    "city": "Burlingame",
+    "state": "CA",
+    "zipcode": 94010
+  },
+  {
+    "name": "Military Weaponry",
+    "street": "1850 El Camino Real",
+    "city": "Menlo Park",
+    "state": "CA",
+    "zipcode": 94027
+  },
+  {
+    "name": "Phoenix Equipment Rentals",
+    "street": "7153 East Thomas Road",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "zipcode": 85251
+  }
+
+]
