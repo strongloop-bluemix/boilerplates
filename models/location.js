@@ -23,7 +23,7 @@ var RentalLocation = module.exports = db.createModel(
  */
 
 RentalLocation.nearby = function (lat, long, fn) {
-  RentalLocation.all(function (err, locations) {
+  RentalLocation.find(function (err, locations) {
     var te = new TaskEmitter();
     var result = [];
      
