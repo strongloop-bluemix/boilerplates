@@ -96,10 +96,11 @@ describe('REST', function(){
     
     describe('GET /locations/nearby', function(){
       it('should return a list of locations near given point', function(done) {
-        json('get', '/locations/nearby?here[lat]=10&here[long]=20')
+        json('get', '/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225')
           .expect(200, function (err, res) {
             var locations = res.body;
             assert(Array.isArray(locations));
+            assert.equal(locations[0].name, 'Bay Area Firearms');
             done();
           });
       });
