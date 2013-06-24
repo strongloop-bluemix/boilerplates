@@ -48,6 +48,25 @@ describe('REST', function(){
           });
       });
     });
+    
+    describe('PUT /weapons/:id', function(){
+      it('should update a weapon with the given id', function(done) {
+        json('get', '/weapons/1')
+          .expect(200, function (err, res) {
+            var weapon = res.body;
+            assert.equal(weapon.id, 1);
+            assert.equal(weapon.audibleRange, 52.8);
+            json('put', '/weapons/1')
+              .send({data: {audibleRange: 999}})
+              .expect(200, function (err, res) {
+                var updatedWeapon = res.body;
+                assert.equal(updatedWeapon.id, 1);
+                assert.equal(updatedWeapon.audibleRange, 999);
+                done();
+              });
+          });
+      });
+    });
   });
   
   describe('Unexpected Usage', function(){
