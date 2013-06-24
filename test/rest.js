@@ -33,13 +33,13 @@ describe('REST', function(){
     describe('POST /weapons', function(){
       it('should create a new weapon', function(done) {
         json('post', '/weapons')
-          .send({data: {
+          .send({
             "title": "M1911-2",
             "audibleRange": 52.8,
             "effectiveRange": 50,
             "rounds": 7,
             "fireModes": "Single"
-          }})
+          })
           .expect(200)
           .end(function (err, res) {
             assert(typeof res.body === 'object');
@@ -57,24 +57,38 @@ describe('REST', function(){
             assert.equal(weapon.id, 1);
             assert.equal(weapon.audibleRange, 52.8);
             json('put', '/weapons/1')
-              .send({data: {audibleRange: 999}})
+              .send({
+                audibleRange: 999,
+                effectiveRange: weapon.effectiveRange,
+                rounds: weapon.rounds,
+                fireModes: weapon.fireModes
+              })
               .expect(200, function (err, res) {
                 var updatedWeapon = res.body;
                 assert.equal(updatedWeapon.id, 1);
                 assert.equal(updatedWeapon.audibleRange, 999);
-                done();
+                json('get', '/weapons/1')
+                  .expect(200, function (err, res) {
+                    var foundWeapon = res.body;
+                    assert.equal(foundWeapon.id, 1);
+                    assert.equal(foundWeapon.audibleRange, 999);
+                    assert.equal(foundWeapon.effectiveRange, weapon.effectiveRange);
+                    assert.equal(foundWeapon.rounds, weapon.rounds);
+                    assert.equal(foundWeapon.fireModes, weapon.fireModes);
+                    done();
+                  });
               });
           });
       });
     });
   });
   
-  describe('Unexpected Usage', function(){
-    describe('POST /weapons/:id', function(){
-      it('should not crash the server when posting a bad id', function(done) {
-        json('post', '/weapons/foobar').send({}).expect(404, done);
-      });
-    });
-  });
+  // describe('Unexpected Usage', function(){
+  //   describe('POST /weapons/:id', function(){
+  //     it('should not crash the server when posting a bad id', function(done) {
+  //       json('post', '/weapons/foobar').send({}).expect(404, done);
+  //     });
+  //   });
+  // });
 
 });
