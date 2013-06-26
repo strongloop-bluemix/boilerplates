@@ -15,29 +15,31 @@ var i = 1;
 
 var importer = module.exports = new TaskEmitter();
 
-Location.destroyAll(function () {
-  Weapon.destroyAll(function () {
-    weapons.forEach(function (obj) {
-      obj.name = obj.title;
-      delete obj.title;
-      delete obj.slot;
-      delete obj.source;
-      delete obj.damage;
-      delete obj.rawDamage;
-      obj.id = i++;
-    
-      if(Array.isArray(obj.audibleRange)) obj.audibleRange = obj.audibleRange[0];
-      if(Array.isArray(obj.rounds)) obj.rounds = obj.rounds[0];
-      if(Array.isArray(obj.fireModes)) obj.fireModes = JSON.stringify(obj.fireModes);
-      if(Array.isArray(obj.extras)) obj.extras = JSON.stringify(obj.extras);
-      if(Array.isArray(obj.magazines)) obj.magazines = JSON.stringify(obj.magazines);
-  
-      importer.task(Weapon, 'create', obj);
-    });
-
-    locations.forEach(function (loc) {
-      importer.task(Location, 'create', loc);
+db.autoupdate(function () {
+  Location.destroyAll(function () {
+    Weapon.destroyAll(function () {
+      weapons.forEach(function (obj) {
+        obj.name = obj.title;
+        delete obj.title;
+        delete obj.slot;
+        delete obj.source;
+        delete obj.damage;
+        delete obj.rawDamage;
+        obj.id = ++i;
+          
+        if(Array.isArray(obj.audibleRange)) obj.audibleRange = obj.audibleRange[0];
+        if(Array.isArray(obj.rounds)) obj.rounds = obj.rounds[0];
+        if(Array.isArray(obj.fireModes)) obj.fireModes = JSON.stringify(obj.fireModes);
+        if(Array.isArray(obj.extras)) obj.extras = JSON.stringify(obj.extras);
+        if(Array.isArray(obj.magazines)) obj.magazines = JSON.stringify(obj.magazines);
+        
+        importer.task(Weapon, 'create', obj);
+      });
+      
+      locations.forEach(function (loc) {
+        loc.id = i++;
+        importer.task(Location, 'create', loc);
+      });
     });
   });
 });
-

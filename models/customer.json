@@ -5,7 +5,8 @@
     "oracle": {
       "schema": "BLACKPOOL",
       "table": "CUSTOMER"
-    }
+    },
+    "extend": "User"
   },
   "properties": {
     "id": {
@@ -41,6 +42,9 @@
         "dataLength": 20,
         "nullable": "Y"
       }
+    },
+    "password": {
+      "type": "Password"
     }
   }
 }

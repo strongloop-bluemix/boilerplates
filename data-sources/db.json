@@ -1,0 +1,14 @@
+{
+  "memory": {
+  },
+  "oracle": {
+    "connector": "asteroid-connector-oracle",
+    "host": "127.0.0.1",
+    "database": "XE",
+    "username": "blackpool",
+    "password": "password"
+  },
+  "mongodb": {
+    "database": "blackpool"
+  }
+}

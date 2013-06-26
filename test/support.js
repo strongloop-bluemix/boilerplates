@@ -1,8 +1,8 @@
 /**
- * Force Test Mode
+ * Force memory adapter
  */
 
-process.env.NODE_ENV = 'test';
+process.env.DB = 'memory';
 
 /**
  * Utils

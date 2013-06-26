@@ -68,7 +68,7 @@ RentalLocation.beforeSave = function (next, loc) {
   if(!loc.geo) {
     rest.geocode(loc.street, loc.city, loc.zipcode, function (err, res, result) {
       if(result && result[0]) {
-        loc.geo = new GeoPoint(result[0]);
+        loc.geo = result[0].lng + ',' + result[0].lat;
         next();
       } else {
         next(new Error('could not find location'));
