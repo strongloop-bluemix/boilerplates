@@ -16,8 +16,18 @@ var i = 1;
 var importer = module.exports = new TaskEmitter();
 
 db.autoupdate(function () {
-  Location.destroyAll(function () {
-    Weapon.destroyAll(function () {
+  Location.destroyAll(function (err) {
+    if(err) {
+      console.error('Could not destroy locations.');
+      throw err;
+    }
+    
+    Weapon.destroyAll(function (err) {
+      if(err) {
+        console.error('Could not destroy weapons (PRODUCT).');
+        throw err;
+      }
+      
       weapons.forEach(function (obj) {
         obj.name = obj.title;
         delete obj.title;

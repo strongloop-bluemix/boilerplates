@@ -8,17 +8,32 @@ var asteroid = require('asteroid');
 var DB = (process.env.DB = process.env.DB || 'memory');
 var config = require('./db.json')[DB];
 
+if(!config) {
+  console.log('No config exists for %s. Add it to the db.json file and try again.', DB);
+  throw new Error('Could not load config for DB');
+}
+
 console.log('Using the %s connector.', DB);
+console.log('To specify another connector:')
+console.log('  DB=oracle node app', DB);
 
 switch(DB) {
-  case 'memory':
-    config.connector = asteroid.Memory;
-  break;
   case 'oracle':
-    config.connector = require('asteroid-connector-oracle');
-  break;
   case 'mongodb':
-    config.connector = require('asteroid-connector-mongodb');
+    var m = 'asteroid-connector-' + DB;
+    try {
+      config.connector = require(m);
+    } catch(e) {
+      console.log('could not require %s', m);
+      console.log('make sure it is listed in package.json');
+      console.log('then run');
+      console.log('  npm install');
+      
+      throw e;
+    }
+  break;
+  default:
+    config.connector = asteroid.Memory;
   break;
 }
 
