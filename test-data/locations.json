@@ -1,5 +1,11 @@
 [
-
+  {
+    "name": "Phoenix Equipment Rentals",
+    "street": "7153 East Thomas Road",
+    "city": "Scottsdale",
+    "state": "AZ",
+    "zipcode": 85251
+  },
   {
     "name": "Bay Area Firearms",
     "street": "390 Lang Road",
@@ -15,11 +21,22 @@
     "zipcode": 94027
   },
   {
-    "name": "Phoenix Equipment Rentals",
-    "street": "7153 East Thomas Road",
-    "city": "Scottsdale",
-    "state": "AZ",
-    "zipcode": 85251
+    "name": "Munitions Shopmore",
+    "street": "Tolstraat 200",
+    "city": "Amsterdam",
+    "zipcode": 1074
+  },
+  {
+    "name": "Cascabel Armory",
+    "street": "2799 Broadway",
+    "city": "New York",
+    "state": "NY",
+    "zipcode": 10025
+  },
+  {
+    "name": "Marine Parade",
+    "street": "32/66-70 Marine Parade",
+    "city": "Coolangatta",
+    "zipcode": 4225
   }
-
 ]

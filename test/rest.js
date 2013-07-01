@@ -101,6 +101,13 @@ describe('REST', function(){
             var locations = res.body;
             assert(Array.isArray(locations));
             assert.equal(locations[0].name, 'Bay Area Firearms');
+            assert.equal(locations.length, testData.locations.length);
+            locations.forEach(function (l) {
+              assert(l.geo);
+              assert.equal(typeof l.geo.lat, 'number');
+              assert.equal(typeof l.geo.lng, 'number');
+            });
+            assert.equal(locations[locations.length - 1].city, 'Amsterdam');
             done();
           });
       });

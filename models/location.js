@@ -37,7 +37,7 @@ RentalLocation.nearby = function (here, page, max, fn) {
   
   var limit = 10;
   page = page || 0;
-  max = max || 100000;
+  max = Number(max || 100000);
   
   RentalLocation.find({
     // find locations near the provided GeoPoint
@@ -58,7 +58,7 @@ asteroid.remoteMethod(
     accepts: [
       {arg: 'here', type: 'GeoPoint', required: true},
       {arg: 'page', type: 'Number'},
-      {arg: 'max', type: 'Number', description: 'max distance in meters'}
+      {arg: 'max', type: 'Number', description: 'max distance in miles'}
     ]
   }
 );
