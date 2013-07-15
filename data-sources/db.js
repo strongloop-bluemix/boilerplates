@@ -15,7 +15,7 @@ if(!config) {
 
 console.log('Using the %s connector.', DB);
 console.log('To specify another connector:')
-console.log('  DB=oracle node app', DB);
+console.log('  DB=oracle node app');
 
 switch(DB) {
   case 'oracle':
