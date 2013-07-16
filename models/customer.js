@@ -4,13 +4,13 @@
                                                     
 var db = require("../data-sources/db");     
 var config = require("./customer.json");              
-var asteroid = require('asteroid');                                
+var loopback = require('loopback');
                                                     
 /**                                                 
  * customer Model                                     
  */                                                 
                                                     
-var customer = module.exports = asteroid.User.extend(
+var customer = module.exports = loopback.User.extend(
   'customer',
   config.properties,
   config.options

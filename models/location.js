@@ -4,8 +4,8 @@
                                                     
 var db = require("../data-sources/db");     
 var config = require("./location.json");
-var asteroid = require('asteroid');
-var GeoPoint = asteroid.GeoPoint;
+var loopback = require('loopback');
+var GeoPoint = loopback.GeoPoint;
 var TaskEmitter = require('sl-task-emitter');
 var rest = require("../data-sources/rest-geocode");
 
@@ -52,7 +52,7 @@ RentalLocation.nearby = function (here, page, max, fn) {
  * Expose nearby as a remote method.
  */
 
-asteroid.remoteMethod(
+loopback.remoteMethod(
   RentalLocation.nearby,
   {
     accepts: [

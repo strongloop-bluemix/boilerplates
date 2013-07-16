@@ -2,15 +2,15 @@
  * App Dependencies.
  */
 
-var asteroid = require('asteroid')
-  , app = module.exports = asteroid()
+var loopback = require('loopback')
+  , app = module.exports = loopback()
   , fs = require('fs')
   , path = require('path')
   , request = require('request')
   , TaskEmitter = require('sl-task-emitter');
 
 // expose a rest api
-app.use(asteroid.rest());
+app.use(loopback.rest());
 
 // require models
 fs
