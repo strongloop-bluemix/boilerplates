@@ -3,7 +3,7 @@
  */
 
 var weapons = require('./weapons.json');
-var asteroid = require('asteroid');
+var loopback = require('loopback');
 var fs = require('fs');
 var path = require('path');
 var db = require('../data-sources/db');

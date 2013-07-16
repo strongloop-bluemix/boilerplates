@@ -1,13 +1,13 @@
 {
-  "name": "asteroid-sample-app",
+  "name": "loopback-sample-app",
   "version": "0.0.0",
-  "description": "sample asteroid application",
+  "description": "sample loopback application",
   "main": "app.js",
   "dependencies": {
-    "asteroid": "git+ssh://git@github.com/strongloop/asteroid.git",
-    "asteroid-connector-oracle": "git+ssh://git@github.com/strongloop/asteroid-connector-oracle.git",
-    "asteroid-connector-rest": "git+ssh://git@github.com/strongloop/asteroid-connector-rest.git",
-    "asteroid-connector-mongodb": "git+ssh://git@github.com/strongloop/asteroid-connector-mongodb.git",
+    "loopback": "git+ssh://git@github.com/strongloop/loopback.git",
+    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
+    "loopback-connector-rest": "git+ssh://git@github.com/strongloop/loopback-connector-rest.git",
+    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git",
     "request": "~2.21.0",
     "sl-task-emitter": "0.0.2"
   },
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strongloop/asteroid-sample-app.git"
+    "url": "https://github.com/strongloop/loopback-sample-app.git"
   },
   "scripts": {
     "test": "mocha -b -R spec"

@@ -4,8 +4,8 @@
 
 var weapons = require('./weapons.json');
 var locations = require('./locations.json');
-var asteroid = require('asteroid');
-var app = asteroid();
+var loopback = require('loopback');
+var app = loopback();
 var db = require('../data-sources/db');
 var Weapon = require('../models/weapon');
 var Location = require('../models/location');

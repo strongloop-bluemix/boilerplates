@@ -2,7 +2,7 @@
  * Dependencies
  */
 
-var asteroid = require('asteroid');
+var loopback = require('loopback');
 
 // use the memory connector by default
 var DB = (process.env.DB = process.env.DB || 'memory');
@@ -20,7 +20,7 @@ console.log('  DB=oracle node app');
 switch(DB) {
   case 'oracle':
   case 'mongodb':
-    var m = 'asteroid-connector-' + DB;
+    var m = 'loopback-connector-' + DB;
     try {
       config.connector = require(m);
     } catch(e) {
@@ -33,11 +33,11 @@ switch(DB) {
     }
   break;
   default:
-    config.connector = asteroid.Memory;
+    config.connector = loopback.Memory;
   break;
 }
 
-module.exports = asteroid.createDataSource(config);
+module.exports = loopback.createDataSource(config);
 
 if(DB === 'memory') {
   // import data

@@ -1,7 +1,7 @@
-var asteroid = require("asteroid");
+var loopback = require("loopback");
 
-module.exports = asteroid.createDataSource({
-    connector: require("asteroid-connector-rest"),
+module.exports = loopback.createDataSource({
+    connector: require("loopback-connector-rest"),
     debug: false,
     operations: [
         {
