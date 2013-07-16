@@ -51,12 +51,12 @@ describe('REST', function(){
     
     describe('PUT /weapons/:id', function(){
       it('should update a weapon with the given id', function(done) {
-        json('get', '/weapons/1')
+        json('get', '/weapons')
           .expect(200, function (err, res) {
-            var weapon = res.body;
-            assert.equal(weapon.id, 1);
-            assert.equal(weapon.audibleRange, 52.8);
-            json('put', '/weapons/1')
+            var weapons = res.body;
+            var weapon = weapons[0];
+            
+            json('put', '/weapons/' + weapon.id)
               .send({
                 audibleRange: 999,
                 effectiveRange: weapon.effectiveRange,
@@ -65,12 +65,14 @@ describe('REST', function(){
               })
               .expect(200, function (err, res) {
                 var updatedWeapon = res.body;
-                assert.equal(updatedWeapon.id, 1);
+                assert(updatedWeapon);
+                assert(updatedWeapon.id);
+                assert.equal(updatedWeapon.id, weapon.id);
                 assert.equal(updatedWeapon.audibleRange, 999);
-                json('get', '/weapons/1')
+                json('get', '/weapons/' + weapon.id)
                   .expect(200, function (err, res) {
                     var foundWeapon = res.body;
-                    assert.equal(foundWeapon.id, 1);
+                    assert.equal(foundWeapon.id, weapon.id);
                     assert.equal(foundWeapon.audibleRange, 999);
                     assert.equal(foundWeapon.effectiveRange, weapon.effectiveRange);
                     assert.equal(foundWeapon.rounds, weapon.rounds);
@@ -112,6 +114,17 @@ describe('REST', function(){
           });
       });
     });
+    
+    // describe('GET /customers', function(){
+    //   it('should return a 401 when not logged in as an admin', function(done) {
+    //     json('get', '/customers').expect(401, done);
+    //   });
+    //   
+    //   it('should return all users when logged in as an admin', function(done) {
+    //     
+    //   });
+    // });
+    
   });
   
   // describe('Unexpected Usage', function(){

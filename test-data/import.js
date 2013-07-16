@@ -2,11 +2,12 @@
  * Run `node import.js` to import the test data into the db.
  */
 
+var db = require('../data-sources/db');
 var weapons = require('./weapons.json');
+var customers = require('./customers.json');
 var locations = require('./locations.json');
 var asteroid = require('asteroid');
 var app = asteroid();
-var db = require('../data-sources/db');
 var Weapon = require('../models/weapon');
 var Location = require('../models/location');
 var TaskEmitter = require('sl-task-emitter');
@@ -51,5 +52,21 @@ db.autoupdate(function () {
         importer.task(Location, 'create', loc);
       });
     });
+    
+    var Customer = require('../models/customer');
+    
+    Customer.destroyAll(function (err) {
+      if(err) {
+        console.error('Could not destroy customers.');
+        throw err;
+      }
+      
+      customers.forEach(function (obj) {
+        obj.id = ++i;
+        
+        importer.task(Customer, 'create', obj);
+      });
+    });
+   
   });
 });
