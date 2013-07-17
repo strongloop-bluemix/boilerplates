@@ -42,9 +42,6 @@
         "dataLength": 20,
         "nullable": "Y"
       }
-    },
-    "password": {
-      "type": "Password"
     }
   }
 }
