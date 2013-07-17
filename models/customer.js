@@ -20,14 +20,14 @@ var customer = module.exports = loopback.User.extend(
 customer.attachTo(db);
 customer.session.attachTo(db);
 
-
 // TODO - this should be available as `hideRemotely: true`
-customer.afterRemote('**', function (ctx, inst, next) {
-  if(Array.isArray(inst)) {
-    inst.forEach(removePassword);
-  } else if(inst) {
-    removePassword(inst);
-  }
+customer.beforeRemote('find', function (ctx, inst, next) {
+  var args = ctx.args;
+  var filter = args.filter || (args.filter = {});
+  var fields = filter.fields || (filter.fields = {});
+
+  // always hide password
+  fields.password = false;
   
   next();
 });
