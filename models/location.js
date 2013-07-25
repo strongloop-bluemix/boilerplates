@@ -59,7 +59,8 @@ loopback.remoteMethod(
       {arg: 'here', type: 'GeoPoint', required: true},
       {arg: 'page', type: 'Number'},
       {arg: 'max', type: 'Number', description: 'max distance in miles'}
-    ]
+    ],
+    returns: {arg: 'locations', root: true}
   }
 );
 
