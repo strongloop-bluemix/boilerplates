@@ -5,10 +5,12 @@
 var db = require('../data-sources/db');
 var weapons = require('./weapons.json');
 var customers = require('./customers.json');
+var inventory = require('./inventory.json');
 var locations = require('./locations.json');
 var loopback = require('loopback');
 var app = loopback();
 var Weapon = require('../models/weapon');
+var Inventory = require('../models/inventory');
 var Location = require('../models/location');
 var TaskEmitter = require('sl-task-emitter');
 
@@ -52,6 +54,19 @@ db.autoupdate(function () {
         importer.task(Location, 'create', loc);
       });
     });
+    
+    Inventory.destroyAll(function (err) {
+      if(err) {
+        console.error('Could not destroy inventory.');
+        throw err;
+      }
+      
+      inventory.forEach(function (inv) {
+        inv.id = i++;
+        importer.task(Inventory, 'create', inv);
+      });
+    });
+    
     
     var Customer = require('../models/customer');
     

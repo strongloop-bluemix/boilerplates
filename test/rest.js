@@ -115,6 +115,21 @@ describe('REST', function(){
       });
     });
     
+    describe('GET /locations/:id/inventory', function () {
+      it('should return a list of inventory for the given location id', function (done) {
+        json('get', '/locations/87/inventory')
+          .expect(200, function (err, res) {
+            var inventory = res.body;
+            assert.equal(inventory.length, 86);
+            inventory.forEach(function (inv) {
+              assert.equal(typeof inv.total, 'number');
+              assert.equal(typeof inv.available, 'number');
+            });
+            done();
+          });
+      });
+    });
+    
     // describe('GET /customers', function(){
     //   it('should return a 401 when not logged in as an admin', function(done) {
     //     json('get', '/customers').expect(401, done);

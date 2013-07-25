@@ -8,6 +8,7 @@ var loopback = require('loopback');
 var GeoPoint = loopback.GeoPoint;
 var TaskEmitter = require('sl-task-emitter');
 var rest = require("../data-sources/rest-geocode");
+var Inventory = require('./inventory');
 
 /**                                                 
  * location Model                                     
@@ -17,7 +18,13 @@ var RentalLocation = module.exports = db.createModel(
   "location",                                         
   config.properties,                                
   config.options                                    
-);                                                  
+);        
+
+/**
+ * Each location has inventory.
+ */
+
+RentalLocation.hasMany(Inventory);
 
 /**
  * Find nearby locations.
@@ -64,6 +71,10 @@ loopback.remoteMethod(
   }
 );
 
+/**
+ * Build the geo data when saving using the google maps api.
+ */
+
 RentalLocation.beforeSave = function (next, loc) {
   // geo code the address
   if(!loc.geo) {
@@ -79,3 +90,4 @@ RentalLocation.beforeSave = function (next, loc) {
     next();
   }
 }
+
