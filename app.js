@@ -12,6 +12,9 @@ var loopback = require('loopback')
 // expose a rest api
 app.use(loopback.rest());
 
+// Add static files
+app.use(loopback.static(path.join(__dirname, 'public')));
+
 // require models
 fs
   .readdirSync('./models')
