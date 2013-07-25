@@ -25,6 +25,9 @@ fs
     // expose model over rest
     app.model(require('./models/' + m));
   });
+  
+// enable docs
+app.docs({basePath: 'http://localhost:3000'});
 
 // start the server
 app.listen(3000);

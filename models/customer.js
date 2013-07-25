@@ -2,8 +2,8 @@
  * Module Dependencies                              
  */                                                 
                                                     
-var db = require("../data-sources/db");     
-var config = require("./customer.json");              
+var db = require("../data-sources/db");
+var config = require("./customer.json");
 var loopback = require('loopback');
                                                     
 /**                                                 
@@ -31,9 +31,3 @@ customer.beforeRemote('find', function (ctx, inst, next) {
   
   next();
 });
-
-function removePassword(inst) {
-  if(inst && inst.__data && inst.__data.password) {
-    inst.__data.password = undefined; 
-  }
-}
