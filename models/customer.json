@@ -11,7 +11,6 @@
   "properties": {
     "id": {
       "type": "String",
-      "required": true,
       "length": 20,
       "id": 1,
       "oracle": {
