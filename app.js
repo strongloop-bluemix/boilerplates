@@ -17,7 +17,7 @@ app.use(loopback.static(path.join(__dirname, 'public')));
 
 // require models
 fs
-  .readdirSync('./models')
+  .readdirSync(path.join(__dirname, './models'))
   .filter(function (m) {
     return path.extname(m) === '.js';
   })
