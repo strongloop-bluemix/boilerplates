@@ -7,7 +7,7 @@ var loopback = require('loopback')
   , fs = require('fs')
   , path = require('path')
   , request = require('request')
-  , TaskEmitter = require('sl-task-emitter');
+  , TaskEmitter = require('strong-task-emitter');
 
 // expose a rest api
 app.use(loopback.rest());

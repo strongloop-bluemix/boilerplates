@@ -12,7 +12,7 @@ var app = loopback();
 var Weapon = require('../models/weapon');
 var Inventory = require('../models/inventory');
 var Location = require('../models/location');
-var TaskEmitter = require('sl-task-emitter');
+var TaskEmitter = require('strong-task-emitter');
 
 var i = 1;
 

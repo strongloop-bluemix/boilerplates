@@ -1,15 +1,17 @@
 {
   "name": "loopback-sample-app",
-  "version": "0.0.0",
-  "description": "sample loopback application",
+  "version": "0.0.1",
+  "description": "Sample LoopBack Application",
   "main": "app.js",
   "dependencies": {
     "loopback": "git+ssh://git@github.com/strongloop/loopback.git",
-    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
     "loopback-connector-rest": "git+ssh://git@github.com/strongloop/loopback-connector-rest.git",
-    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git",
     "request": "~2.21.0",
-    "sl-task-emitter": "0.0.2"
+    "strong-task-emitter": "0.0.x"
+  },
+  "optionalDependencies": {
+    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
+    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git"
   },
   "devDependencies": {
     "supertest": "latest"
