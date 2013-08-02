@@ -6,7 +6,7 @@ var db = require("../data-sources/db");
 var config = require("./location.json");
 var loopback = require('loopback');
 var GeoPoint = loopback.GeoPoint;
-var TaskEmitter = require('sl-task-emitter');
+var TaskEmitter = require('strong-task-emitter');
 var rest = require("../data-sources/rest-geocode");
 var Inventory = require('./inventory');
 
