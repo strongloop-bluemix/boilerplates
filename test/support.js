@@ -2,8 +2,6 @@
  * Force memory adapter
  */
 
-process.env.DB = 'memory';
-
 /**
  * Utils
  */
