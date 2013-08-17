@@ -20,10 +20,10 @@
 	$(function () {
 	    window.swaggerUi = new SwaggerUi({
                 discoveryUrl:"http://localhost:3000/swagger/resources",
-                apiKey:"special-key",
+                apiKey:"",
                 dom_id:"swagger-ui-container",
-                supportHeaderParams: true,
-                supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
+                supportHeaderParams: false,
+                supportedSubmitMethods: ['get', 'post', 'put'],
                 onComplete: function(swaggerApi, swaggerUi){
                 	if(console) {
                         console.log("Loaded SwaggerUI")
@@ -50,7 +50,13 @@
 <body>
 <div id='header'>
     <div class="swagger-ui-wrap">
-        <a id="logo" href="/">LoopBack Sample Application</a>
+        <a id="logo">StrongLoop API Explorer</a>
+
+        <form id='api_selector'>
+            <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl"
+                                      type="text"/></div>
+            <div class='input'><a id="explore" href="#">Explore</a></div>
+        </form>
     </div>
 </div>
 
