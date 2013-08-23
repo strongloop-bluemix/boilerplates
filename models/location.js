@@ -62,9 +62,10 @@ RentalLocation.nearby = function (here, page, max, fn) {
 loopback.remoteMethod(
   RentalLocation.nearby,
   {
+    description: 'Find nearby locations around the geo point',
     accepts: [
-      {arg: 'here', type: 'GeoPoint', required: true},
-      {arg: 'page', type: 'Number'},
+      {arg: 'here', type: 'GeoPoint', required: true, description: 'geo location (lat & lng)'},
+      {arg: 'page', type: 'Number', description: 'number of pages (page size=10)'},
       {arg: 'max', type: 'Number', description: 'max distance in miles'}
     ],
     returns: {arg: 'locations', root: true}
