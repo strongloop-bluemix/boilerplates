@@ -1,4 +1,4 @@
-## Loopback Sample Application
+## StrongLoop Suite Sample Application
 
 ### BlackPool Surplus Rentals Corp
 
