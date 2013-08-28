@@ -5,6 +5,7 @@
 /**
  * Utils
  */
+process.env.NODE_ENV = 'test';
 
 request = require('supertest');
 app = require('../app');
