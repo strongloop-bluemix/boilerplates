@@ -2,6 +2,14 @@
  * App Dependencies.
  */
 
+var control = require('strong-cluster-control');
+var options = control.loadOptions();
+
+// If configured as a cluster master, just start controller
+if(options.clustered && options.isMaster) {
+  return control.start(options);
+}
+
 var loopback = require('loopback')
   , app = module.exports = loopback()
   , fs = require('fs')
