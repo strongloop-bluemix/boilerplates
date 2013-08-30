@@ -9,11 +9,21 @@
     "plural": "inventory"
   },
   "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "id": 1,
+      "oracle": {
+        "columnName": "ID",
+        "dataType": "NUMBER",
+        "dataLength": 20,
+        "nullable": "N"
+      }
+    },
     "productId": {
       "type": "String",
       "required": true,
       "length": 20,
-      "id": 1,
       "oracle": {
         "columnName": "PRODUCT_ID",
         "dataType": "VARCHAR2",
@@ -25,7 +35,6 @@
       "type": "String",
       "required": true,
       "length": 20,
-      "id": 2,
       "oracle": {
         "columnName": "LOCATION_ID",
         "dataType": "VARCHAR2",
