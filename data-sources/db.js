@@ -3,18 +3,16 @@
  */
 
 var loopback = require('loopback');
+var config = require('../config');
 
-var nodeEnv = process.env.NODE_ENV || 'demo';
-
-// use the memory connector by default
+// Use the memory connector by default.
 var DB = (process.env.DB = process.env.DB || 'memory');
 
-// load the configuration from .loopbackrc
-var config = require('rc')('loopback')[nodeEnv][DB];
+// Load the environmental settings for this database.
+config = config[config.env][DB];
 
 if(!config) {
-  console.log('No config exists for %s. Add it to the .loopbackrc file and try again.', DB);
-  throw new Error('Could not load config for DB');
+  config = {};
 }
 
 console.log('Using the %s connector.', DB);
@@ -42,7 +40,14 @@ switch(DB) {
   break;
 }
 
-module.exports = loopback.createDataSource(config);
+try {
+  module.exports = loopback.createDataSource(config);
+} catch (e) {
+  console.error('Error while initializing the data source:');
+  console.error(e.stack);
+  console.error('\nPlease check your configuration settings and try again.');
+  process.exit(1);
+}
 
 if(DB === 'memory') {
   // import data
