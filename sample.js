@@ -5,11 +5,11 @@ var Memory = loopback.createDataSource({
 });
 var Widget = loopback.createModel('widget', {
   name: {
-    type: "String",
+    type: 'String',
     required: true
   },
   bars: {
-    type: "Number",
+    type: 'Number',
     required: false
   }
 });
@@ -20,7 +20,7 @@ app.model(Widget);
 app.use(loopback.rest());
 app.listen(3000);
 
-Widget.destroyAll(function () {
+Widget.destroyAll(function() {
   Widget.create({
     name: 'Foo',
     bars: 0

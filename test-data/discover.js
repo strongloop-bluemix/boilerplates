@@ -19,21 +19,21 @@ var include = [
 ];
 
 // discover tables
-db.discoverModelDefinitions(function (err, models) {
-  if(err) {
+db.discoverModelDefinitions(function(err, models) {
+  if (err) {
     console.log(err);
   } else {
-    models.forEach(function (def) {
-      if(~include.indexOf(def.name)) {
+    models.forEach(function(def) {
+      if (~include.indexOf(def.name)) {
         console.log('discovering', def.name);
-        
-        db.discoverSchema(def.name, function (err, schema) {
+
+        db.discoverSchema(def.name, function(err, schema) {
           fs.writeFileSync(
             path.join(modelsDir, schema.name.toLowerCase() + '.json'),
             JSON.stringify(schema, null, 2)
           );
         });
-        
+
         var template = [
         '/**                                                 ',
         ' * Module Dependencies                              ',
@@ -51,7 +51,7 @@ db.discoverModelDefinitions(function (err, models) {
         '  config.properties,                                ',
         '  config.options                                    ',
         ');                                                  '];
-        
+
         template = template.join('\n').replace(/\{name\}/g, def.name.toLowerCase());
         fs.writeFileSync(path.join(modelsDir, def.name.toLowerCase() + '.js'), template);
       }

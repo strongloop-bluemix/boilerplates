@@ -21,7 +21,7 @@ testData = {
   locations: require('../test-data/locations')
 };
 
-before(function (done) {
+before(function(done) {
   importer.on('error', done);
   importer.on('done', done);
 });

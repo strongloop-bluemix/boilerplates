@@ -11,7 +11,7 @@ var DB = (process.env.DB = process.env.DB || 'memory');
 // Load the environmental settings for this database.
 config = config[config.env][DB];
 
-if(!config) {
+if (!config) {
   config = {};
 }
 
@@ -20,18 +20,18 @@ console.log('To specify another connector:');
 console.log('  DB=oracle node app');
 console.log('  DB=mongodb node app');
 
-switch(DB) {
+switch (DB) {
   case 'oracle':
   case 'mongodb':
     var m = 'loopback-connector-' + DB;
     try {
       config.connector = require(m);
-    } catch(e) {
+    } catch (e) {
       console.log('could not require %s', m);
       console.log('make sure it is listed in package.json');
       console.log('then run');
       console.log('  npm install');
-      
+
       throw e;
     }
   break;
@@ -49,7 +49,7 @@ try {
   process.exit(1);
 }
 
-if(DB === 'memory') {
+if (DB === 'memory') {
   // import data
   require('../test-data/import');
 }

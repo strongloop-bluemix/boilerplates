@@ -1,16 +1,16 @@
-/**                                                 
- * Module Dependencies                              
- */                                                 
-                                                    
-var db = require("../data-sources/db");     
-var config = require("./weapon.json");              
+/**
+ * Module Dependencies
+ */
 
-/**                                                 
- * product Model                                     
- */                                                 
-                                                    
-var Weapon = module.exports = db.createModel(   
-  "weapon",                                         
-  config.properties,                                
-  config.options                                    
+var db = require('../data-sources/db');
+var config = require('./weapon.json');
+
+/**
+ * product Model
+ */
+
+var Weapon = module.exports = db.createModel(
+  'weapon',
+  config.properties,
+  config.options
 );

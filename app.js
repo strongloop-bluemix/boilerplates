@@ -8,7 +8,7 @@ var control = require('strong-cluster-control');
 var options = control.loadOptions();
 
 // If configured as a cluster master, just start controller
-if(options.clustered && options.isMaster) {
+if (options.clustered && options.isMaster) {
   return control.start(options);
 }
 
@@ -28,14 +28,14 @@ app.use(loopback.static(path.join(__dirname, 'public')));
 // Require models
 fs
   .readdirSync(path.join(__dirname, './models'))
-  .filter(function (m) {
+  .filter(function(m) {
     return path.extname(m) === '.js';
   })
-  .forEach(function (m) {
+  .forEach(function(m) {
     // expose model over rest
     app.model(require('./models/' + m));
   });
-  
+
 // Enable docs
 app.docs({basePath: 'http://localhost:3000'});
 

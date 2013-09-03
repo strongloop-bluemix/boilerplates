@@ -11,22 +11,22 @@ var inventory = [];
 var weaponTotal = {};
 var request = require('request');
 
-request('http://localhost:3000/weapons', {json: true}, function (err, res, weapons) {
-  request('http://localhost:3000/locations', {json: true}, function (err, res, locations) {
-    locations.forEach(function (loc) {
-      weapons.forEach(function (weapon) {
+request('http://localhost:3000/weapons', {json: true}, function(err, res, weapons) {
+  request('http://localhost:3000/locations', {json: true}, function(err, res, locations) {
+    locations.forEach(function(loc) {
+      weapons.forEach(function(weapon) {
         var availableAtLocation = rand(0, 100);
-      
+
         inventory.push({
           productId: weapon.id,
           locationId: loc.id,
           available: rand(0, availableAtLocation),
           total: availableAtLocation
         });
-        
+
       });
     });
-    
+
     fs.writeFileSync('inventory.json', JSON.stringify(inventory, null, 2));
   });
 });

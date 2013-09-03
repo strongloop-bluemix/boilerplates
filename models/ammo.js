@@ -2,15 +2,15 @@
  * Module Dependencies
  */
 
-var db = require("../data-sources/db");
-var config = require("./ammo.json");
+var db = require('../data-sources/db');
+var config = require('./ammo.json');
 
 /**
  * Ammo Model
  */
 
 var Ammo = module.exports = db.createModel(
-  "ammo",
+  'ammo',
   config.properties,
   config.options
 );
