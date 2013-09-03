@@ -9,7 +9,8 @@
     "request": "~2.21.0",
     "strong-task-emitter": "~0.0.4",
     "rc": "~0.3.0",
-    "strong-cluster-control": "~0.1.0"
+    "strong-cluster-control": "~0.1.0",
+    "strong-agent": "latest"
   },
   "optionalDependencies": {
     "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
