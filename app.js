@@ -40,4 +40,6 @@ fs
 app.docs({basePath: 'http://localhost:3000'});
 
 // Start the server
-app.listen(3000);
+app.listen(3000, function() {
+  console.log('StrongLoop Suite sample is now ready at http://127.0.0.1:3000');
+});
