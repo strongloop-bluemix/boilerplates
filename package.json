@@ -1,6 +1,6 @@
 {
   "name": "loopback-sample-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Sample LoopBack Application",
   "main": "app.js",
   "dependencies": {
@@ -10,7 +10,7 @@
     "strong-task-emitter": "~0.0.4",
     "rc": "~0.3.0",
     "strong-cluster-control": "~0.1.0",
-    "strong-agent": "latest"
+    "strong-agent": "~0.2.9"
   },
   "optionalDependencies": {
     "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
@@ -33,6 +33,7 @@
     "coverage": "mocha -r blanket -R html-cov > coverage_loopback-sample-app.html"
   },
   "author": "Ritchie Martori",
-  "private": true,
-  "readmeFilename": "README.md"
+  "private": false,
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
