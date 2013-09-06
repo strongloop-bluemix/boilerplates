@@ -10,16 +10,18 @@
   },
   "properties": {
     "id": {
-      "type": "Number",
+      "type": "String",
       "required": true,
-      "id": 1,
+      "id": true,
+      "length": 20,
       "oracle": {
         "columnName": "ID",
-        "dataType": "NUMBER",
+        "dataType": "VARCHAR2",
         "dataLength": 20,
         "nullable": "N"
       }
     },
+
     "productId": {
       "type": "String",
       "required": true,
