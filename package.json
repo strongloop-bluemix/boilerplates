@@ -1,11 +1,11 @@
 {
-  "name": "loopback-sample-app",
+  "name": "sls-sample-app",
   "version": "1.0.0",
-  "description": "Sample LoopBack Application",
+  "description": "Sample StrongLoop Suite Application",
   "main": "app.js",
   "dependencies": {
-    "loopback": "git+ssh://git@github.com/strongloop/loopback.git",
-    "loopback-connector-rest": "git+ssh://git@github.com/strongloop/loopback-connector-rest.git",
+    "loopback": "git+ssh://git@github.com/strongloop/loopback.git#strongloopsuite-1.0.0-0",
+    "loopback-connector-rest": "git+ssh://git@github.com/strongloop/loopback-connector-rest.git#strongloopsuite-1.0.0-0",
     "request": "~2.21.0",
     "strong-task-emitter": "~0.0.4",
     "rc": "~0.3.0",
@@ -13,8 +13,8 @@
     "strong-agent": "~0.2.9"
   },
   "optionalDependencies": {
-    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
-    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git"
+    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git#strongloopsuite-1.0.0-0",
+    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git#strongloopsuite-1.0.0-0"
   },
   "devDependencies": {
     "supertest": "~0.7.1",
