@@ -125,7 +125,8 @@ Google's location API is used to return the users city from a given zip or lat/l
 
 ### Configure and run the application
 
-By default, the sample application uses the memory connector:
+By default, the sample application uses the memory connector and listen on
+http://0.0.0.0:3000.
  
 > node app
 
@@ -153,6 +154,14 @@ at the root of the module.
             }
         }
     }
+
+The sample can be configured using the following environment variables:
+
+- DB: The db type, use 'memory', 'mongodb' or 'oracle'
+- IP: The http server listener ip address or hostname, default to 0.0.0.0 (any address)
+- PORT: The http server listener port number, default to 3000
+
+For example,
 
 To run the application at port 3001 with MongoDB:
 
