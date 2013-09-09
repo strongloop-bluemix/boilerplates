@@ -1,7 +1,7 @@
 {
   "name": "sls-sample-app",
   "version": "1.0.0",
-  "description": "Sample StrongLoop Suite Application",
+  "description": "StrongLoop Suite Sample Application",
   "main": "app.js",
   "dependencies": {
     "loopback": "git+ssh://git@github.com/strongloop/loopback.git#strongloopsuite-1.0.0-0",
@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strongloop/loopback-sample-app.git"
+    "url": "https://github.com/strongloop/sls-sample-app.git"
   },
   "scripts": {
     "test": "mocha -b -R spec",
     "blanket": {
       "pattern": "//^((?!(node_modules|test)).)*$/"
     },
-    "coverage": "mocha -r blanket -R html-cov > coverage_loopback-sample-app.html"
+    "coverage": "mocha -r blanket -R html-cov > coverage_sls-sample-app.html"
   },
   "author": "Ritchie Martori",
   "private": false,
