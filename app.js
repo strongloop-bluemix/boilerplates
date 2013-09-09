@@ -19,6 +19,13 @@ var loopback = require('loopback')
   , request = require('request')
   , TaskEmitter = require('strong-task-emitter');
 
+// Set up the HTTP listener ip & port
+var ip = process.env.IP || '0.0.0.0'
+var port = process.env.PORT || 3000;
+var baseURL = 'http://' + ip + ':' + port;
+app.set('ip', ip);
+app.set('port', port);
+
 // Expose a rest api
 app.use(loopback.rest());
 
@@ -37,9 +44,9 @@ fs
   });
 
 // Enable docs
-app.docs({basePath: 'http://localhost:3000'});
+app.docs({basePath: baseURL});
 
 // Start the server
-app.listen(3000, function() {
-  console.log('StrongLoop Suite sample is now ready at http://127.0.0.1:3000');
+app.listen(port, ip, function() {
+  console.log('StrongLoop Suite sample is now ready at ' + baseURL);
 });
