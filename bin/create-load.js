@@ -9,6 +9,10 @@ var shuffle = require('shuffle').shuffle;
 var table = require('text-table');
 var weighted = require('weighted');
 
+// If false, non-GET requests are enabled. Not recommended for shared (e.g. C9)
+// servers.
+var safeMode = true;
+
 /**
  * Returns `body` parsed as JSON if it's not already been parsed, `body
  * otherwise.
@@ -71,7 +75,13 @@ function start() {
  * `routes`.
  */
 function distillRoutes(routes) {
-  return routes.map(function (route) {
+  return routes.filter(function (route) {
+    if (safeMode && route.verb.toUpperCase() !== 'GET') {
+      return false;
+    }
+
+    return true;
+  }).map(function (route) {
     // TODO(schoon) - Handle the `accepts` in a meaningful way.
     return route.verb.toUpperCase() + ' ' + route.path;
   });
