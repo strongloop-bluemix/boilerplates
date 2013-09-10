@@ -14,7 +14,12 @@ var Location = require('../models/location');
 var Customer = require('../models/customer');
 var TaskEmitter = require('strong-task-emitter');
 
-var i = 1;
+var ids = {
+  location: 1,
+  weapon: 1,
+  inventory: 1,
+  customer: 1
+}
 
 var importer = module.exports = new TaskEmitter();
 importer.on('error', function (err) {
@@ -41,7 +46,7 @@ db.autoupdate(function () {
         delete obj.source;
         delete obj.damage;
         delete obj.rawDamage;
-        obj.id = ++i;
+        obj.id = ids.weapon++;
           
         if(Array.isArray(obj.audibleRange)) obj.audibleRange = obj.audibleRange[0];
         if(Array.isArray(obj.rounds)) obj.rounds = obj.rounds[0];
@@ -53,7 +58,7 @@ db.autoupdate(function () {
       });
       
       locations.forEach(function (loc) {
-        loc.id = i++;
+        loc.id = ids.location++;
         importer.task(Location, 'create', loc);
       });
     });
@@ -65,7 +70,7 @@ db.autoupdate(function () {
       }
       
       inventory.forEach(function (inv) {
-        inv.id = i++;
+        inv.id = ids.inventory++;
         importer.task(Inventory, 'create', inv);
       });
     });
@@ -79,7 +84,7 @@ db.autoupdate(function () {
       }
       
       customers.forEach(function (obj) {
-        obj.id = ++i;
+        obj.id = ids.customer++;
         
         importer.task(Customer, 'create', obj);
       });
