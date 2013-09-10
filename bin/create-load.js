@@ -117,7 +117,7 @@ function hit(choices) {
   var path = parts[1];
 
   // We replace any :id path fragments with 1, which we hope exists.
-  path.replace(/\:id/g, 1);
+  path = path.replace(/\:id/g, 1);
 
   if (verb === 'all') {
     verb = 'post';
