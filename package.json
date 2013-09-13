@@ -12,9 +12,9 @@
   },
   "optionalDependencies": {
     "strong-cluster-control": "~0.1.0",
-    "strong-agent": "~0.2.15"
+    "strong-agent": "~0.2.15",
     "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
-    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git"
+    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git",
     "weighted": "~0.2.2",
     "shuffle": "~0.2.1",
     "text-table": "~0.1.1"
