@@ -23,6 +23,7 @@ console.log('  DB=mongodb node app');
 switch (DB) {
   case 'oracle':
   case 'mongodb':
+  case 'mysql':
     var m = 'loopback-connector-' + DB;
     try {
       config.connector = require(m);
