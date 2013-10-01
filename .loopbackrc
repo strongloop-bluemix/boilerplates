@@ -14,6 +14,13 @@
             "username": "demo",
             "password": "L00pBack",
             "port": 27017
+        },
+        "mysql": {
+            "host": "demo.strongloop.com",
+            "port": 3306,
+            "database": "demo",
+            "username": "demo",
+            "password": "L00pBack"
         }
     }
 }
