@@ -16,6 +16,7 @@ var loopback = require('loopback')
   , app = module.exports = loopback()
   , fs = require('fs')
   , path = require('path')
+  , cors = require('cors')
   , request = require('request')
   , TaskEmitter = require('strong-task-emitter');
 
@@ -25,6 +26,9 @@ var port = process.env.PORT || 3000;
 var baseURL = 'http://' + ip + ':' + port;
 app.set('ip', ip);
 app.set('port', port);
+
+// Establish our overly-permissive CORS rules.
+app.use(cors());
 
 // Expose a rest api
 app.use(loopback.rest());
