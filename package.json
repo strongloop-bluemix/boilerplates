@@ -4,8 +4,8 @@
   "description": "StrongLoop Suite Sample Application",
   "main": "app.js",
   "dependencies": {
-    "loopback": "git+ssh://git@github.com/strongloop/loopback.git",
-    "loopback-connector-rest": "git+ssh://git@github.com/strongloop/loopback-connector-rest.git",
+    "loopback": "1.1.0",
+    "loopback-connector-rest": "1.1.0"
     "request": "~2.21.0",
     "strong-task-emitter": "~0.0.4",
     "rc": "~0.3.0",
@@ -14,9 +14,9 @@
   "optionalDependencies": {
     "strong-cluster-control": "~0.1.0",
     "strong-agent": "~0.2.15",
-    "loopback-connector-oracle": "git+ssh://git@github.com/strongloop/loopback-connector-oracle.git",
-    "loopback-connector-mongodb": "git+ssh://git@github.com/strongloop/loopback-connector-mongodb.git",
-    "loopback-connector-mysql": "git+ssh://git@github.com/strongloop/loopback-connector-mysql.git",
+    "loopback-connector-oracle": "1.1.0",
+    "loopback-connector-mongodb": "1.1.0",
+    "loopback-connector-mysql": "1.0.0",
     "weighted": "~0.2.2",
     "shuffle": "~0.2.1",
     "text-table": "~0.1.1"
