@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "loopback": "1.1.0",
-    "loopback-connector-rest": "1.1.0"
+    "loopback-connector-rest": "1.0.0",
     "request": "~2.21.0",
     "strong-task-emitter": "~0.0.4",
     "rc": "~0.3.0",
