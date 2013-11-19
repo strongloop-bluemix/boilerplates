@@ -12,7 +12,7 @@
     "cors": "~1.0.1"
   },
   "optionalDependencies": {
-    "strong-cluster-control": "~0.1.0",
+    "strong-cluster-control": "~0.2.0",
     "strong-agent": "~0.2.15",
     "loopback-connector-oracle": "~1.1.0",
     "loopback-connector-mongodb": "~1.1.0",
