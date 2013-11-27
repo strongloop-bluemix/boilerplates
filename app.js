@@ -52,5 +52,5 @@ app.docs({basePath: baseURL});
 
 // Start the server
 app.listen(port, ip, function() {
-  console.log('StrongLoop Suite sample is now ready at ' + baseURL);
+  console.error('StrongLoop Suite sample is now ready at ' + baseURL);
 });

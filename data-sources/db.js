@@ -15,10 +15,10 @@ if (!config) {
   config = {};
 }
 
-console.log('Using the %s connector.', DB);
-console.log('To specify another connector:');
-console.log('  DB=oracle node app');
-console.log('  DB=mongodb node app');
+console.error('Using the %s connector.', DB);
+console.error('To specify another connector:');
+console.error('  DB=oracle node app');
+console.error('  DB=mongodb node app');
 
 switch (DB) {
   case 'oracle':
@@ -28,10 +28,10 @@ switch (DB) {
     try {
       config.connector = require(m);
     } catch (e) {
-      console.log('could not require %s', m);
-      console.log('make sure it is listed in package.json');
-      console.log('then run');
-      console.log('  npm install');
+      console.error('could not require %s', m);
+      console.error('make sure it is listed in package.json');
+      console.error('then run');
+      console.error('  npm install');
 
       throw e;
     }
