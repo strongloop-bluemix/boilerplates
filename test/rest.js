@@ -16,9 +16,9 @@ describe('REST', function() {
 
   describe('Expected Usage', function() {
 
-    describe('GET /weapons', function() {
+    describe('GET /api/weapons', function() {
       it('should return a list of all weapons', function(done) {
-        json('get', '/weapons')
+        json('get', '/api/weapons')
           .expect(200)
           .end(function(err, res) {
             assert(Array.isArray(res.body));
@@ -29,9 +29,9 @@ describe('REST', function() {
       });
     });
 
-    describe('POST /weapons', function() {
+    describe('POST /api/weapons', function() {
       it('should create a new weapon', function(done) {
-        json('post', '/weapons')
+        json('post', '/api/weapons')
           .send({
             'title': 'M1911-2',
             'audibleRange': 52.8,
@@ -48,14 +48,14 @@ describe('REST', function() {
       });
     });
 
-    describe('PUT /weapons/:id', function() {
+    describe('PUT /api/weapons/:id', function() {
       it('should update a weapon with the given id', function(done) {
-        json('get', '/weapons')
+        json('get', '/api/weapons')
           .expect(200, function(err, res) {
             var weapons = res.body;
             var weapon = weapons[0];
 
-            json('put', '/weapons/' + weapon.id)
+            json('put', '/api/weapons/' + weapon.id)
               .send({
                 audibleRange: 999,
                 effectiveRange: weapon.effectiveRange,
@@ -68,7 +68,7 @@ describe('REST', function() {
                 assert(updatedWeapon.id);
                 assert.equal(updatedWeapon.id, weapon.id);
                 assert.equal(updatedWeapon.audibleRange, 999);
-                json('get', '/weapons/' + weapon.id)
+                json('get', '/api/weapons/' + weapon.id)
                   .expect(200, function(err, res) {
                     var foundWeapon = res.body;
                     assert.equal(foundWeapon.id, weapon.id);
@@ -83,9 +83,9 @@ describe('REST', function() {
       });
     });
 
-    describe('GET /locations', function() {
+    describe('GET /api/locations', function() {
       it('should return a list of locations', function(done) {
-        json('get', '/locations')
+        json('get', '/api/locations')
           .expect(200, function(err, res) {
             var locations = res.body;
             assert(Array.isArray(locations));
@@ -95,9 +95,9 @@ describe('REST', function() {
       });
     });
 
-    describe('GET /locations/nearby', function() {
+    describe('GET /api/locations/nearby', function() {
       it('should return a list of locations near given point', function(done) {
-        json('get', '/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225')
+        json('get', '/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225')
           .expect(200, function(err, res) {
             var locations = res.body;
             assert(Array.isArray(locations));
@@ -114,9 +114,9 @@ describe('REST', function() {
       });
     });
 
-    describe('GET /locations/:id/inventory', function() {
+    describe('GET /api/locations/:id/inventory', function() {
       it('should return a list of inventory for the given location id', function(done) {
-        json('get', '/locations/5/inventory')
+        json('get', '/api/locations/5/inventory')
           .expect(200, function(err, res) {
             var inventory = res.body;
             assert.equal(inventory.length, 87);
@@ -129,9 +129,9 @@ describe('REST', function() {
       });
     });
 
-    // describe('GET /customers', function(){
+    // describe('GET /api/customers', function(){
     //   it('should return a 401 when not logged in as an admin', function(done) {
-    //     json('get', '/customers').expect(401, done);
+    //     json('get', '/api/customers').expect(401, done);
     //   });
     //
     //   it('should return all users when logged in as an admin', function(done) {
@@ -141,12 +141,12 @@ describe('REST', function() {
 
   });
 
-  // describe('Unexpected Usage', function(){
-  //   describe('POST /weapons/:id', function(){
-  //     it('should not crash the server when posting a bad id', function(done) {
-  //       json('post', '/weapons/foobar').send({}).expect(404, done);
-  //     });
-  //   });
-  // });
+  describe('Unexpected Usage', function(){
+     describe('POST /api/weapons/:id', function(){
+       it('should not crash the server when posting a bad id', function(done) {
+         json('post', '/api/weapons/foobar').send({}).expect(404, done);
+       });
+     });
+   });
 
 });
