@@ -23,12 +23,12 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li class="depth-1"><a href="#welcome">Welcome</a></li>
                     <li class="depth-2"><a href="#sample-requests">Sample Requests</a></li>
-                    <li class="depth-3"><a href="#route-weapons">GET /weapons</a></li>
-                    <li class="depth-3"><a href="#route-weapons-2">GET /weapons/2</a></li>
-                    <li class="depth-3"><a href="#route-weapons-filter">GET /weapons?filter</a></li>
-                    <li class="depth-3"><a href="#route-locations">GET /locations</a></li>
-                    <li class="depth-3"><a href="#route-locations-nearby">GET /locations/nearby</a></li>
-                    <li class="depth-3"><a href="#route-locations-inventory">GET /locations/:id/inventory</a></li>
+                    <li class="depth-3"><a href="#route-weapons">GET /api/weapons</a></li>
+                    <li class="depth-3"><a href="#route-weapons-2">GET /api/weapons/2</a></li>
+                    <li class="depth-3"><a href="#route-weapons-filter">GET /api/weapons?filter</a></li>
+                    <li class="depth-3"><a href="#route-locations">GET /api/locations</a></li>
+                    <li class="depth-3"><a href="#route-locations-nearby">GET /api/locations/nearby</a></li>
+                    <li class="depth-3"><a href="#route-locations-inventory">GET /api/locations/:id/inventory</a></li>
                     <li class="depth-2"><a href="#next-steps">Next Steps</a></li>
                     <li class="depth-3"><a href="#api-explorer">API Explorer</a></li>
                     <li class="depth-3"><a href="#cyoa">Choose Your Own Adventure</a></li>
@@ -43,30 +43,30 @@
                     <h2 id="sample-requests">Sample Requests</h2>
                     <p>Click on the friendly <a href="#route-weapons">GET</a> buttons below to try out a few example requests!</p>
                     <div id="route-weapons">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/weapons" data-target=".route-weapons" data-truncate="20">GET</a> /weapons</h3>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons" data-target=".route-weapons" data-truncate="20">GET</a> /api/weapons</h3>
                         <pre><code class="route-weapons"></code></pre>
                     </div>
                     <div id="route-weapons-2">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/weapons/2" data-target=".route-weapons-2">GET</a> /weapons/2</h3>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons/2" data-target=".route-weapons-2">GET</a> /api/weapons/2</h3>
                         <pre><code class="route-weapons-2"></code></pre>
                     </div>
                     <div id="route-weapons-filter">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3" data-target=".route-weapons-filter">GET</a> /weapons?filter</h3>
-                        <p>Actual request: <code>GET /weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3</code> (The top three weapons with a range over 900m)</p>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3" data-target=".route-weapons-filter">GET</a> /api/weapons?filter</h3>
+                        <p>Actual request: <code>GET /api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3</code> (The top three weapons with a range over 900m)</p>
                         <pre><code class="route-weapons-filter"></code></pre>
                     </div>
                     <div id="route-locations">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/locations" data-target=".route-locations" data-truncate="20">GET</a> /locations</h3>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations" data-target=".route-locations" data-truncate="20">GET</a> /api/locations</h3>
                         <pre><code class="route-locations"></code></pre>
                     </div>
                     <div id="route-locations-nearby">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225" data-target=".route-locations-nearby" data-truncate="20">GET</a> /locations/nearby</h3>
-                        <p>Actual request: <code>GET /locations/nearby?here[lat]=37.587409&here[lng]=-122.338225</code></p>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225" data-target=".route-locations-nearby" data-truncate="20">GET</a> /api/locations/nearby</h3>
+                        <p>Actual request: <code>GET /api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225</code></p>
                         <pre><code class="route-locations-nearby"></code></pre>
                     </div>
                     <div id="route-locations-inventory">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/locations/5/inventory" data-target=".route-locations-inventory" data-truncate="20">GET</a> /locations/:id/inventory</h3>
-                        <p>Actual request: <code>GET /locations/5/inventory</code></p>
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations/5/inventory" data-target=".route-locations-inventory" data-truncate="20">GET</a> /api/locations/:id/inventory</h3>
+                        <p>Actual request: <code>GET /api/locations/5/inventory</code></p>
                         <pre><code class="route-locations-inventory"></code></pre>
                     </div>
                     <h2 id="next-steps">Next Steps</h2>
