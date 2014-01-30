@@ -17,7 +17,7 @@ importer = require('../test-data/import');
  */
 
 testData = {
-  weapons: require('../test-data/weapons'),
+  cars: require('../test-data/cars'),
   locations: require('../test-data/locations')
 };
 

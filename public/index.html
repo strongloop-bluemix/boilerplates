@@ -23,9 +23,9 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li class="depth-1"><a href="#welcome">Welcome</a></li>
                     <li class="depth-2"><a href="#sample-requests">Sample Requests</a></li>
-                    <li class="depth-3"><a href="#route-weapons">GET /api/weapons</a></li>
-                    <li class="depth-3"><a href="#route-weapons-2">GET /api/weapons/2</a></li>
-                    <li class="depth-3"><a href="#route-weapons-filter">GET /api/weapons?filter</a></li>
+                    <li class="depth-3"><a href="#route-cars">GET /api/cars</a></li>
+                    <li class="depth-3"><a href="#route-cars-2">GET /api/cars/2</a></li>
+                    <li class="depth-3"><a href="#route-cars-filter">GET /api/cars?filter</a></li>
                     <li class="depth-3"><a href="#route-locations">GET /api/locations</a></li>
                     <li class="depth-3"><a href="#route-locations-nearby">GET /api/locations/nearby</a></li>
                     <li class="depth-3"><a href="#route-locations-inventory">GET /api/locations/:id/inventory</a></li>
@@ -41,19 +41,19 @@
                         <p>Welcome to StrongLoop Suite, an API tier for connecting Enterprise data to devices and browsers. StrongLoop Suite includes an open source mobile framework, a built-in monitoring and management console, all built on top of a certified distribution of Node.js.</p>
                     </div>
                     <h2 id="sample-requests">Sample Requests</h2>
-                    <p>Click on the friendly <a href="#route-weapons">GET</a> buttons below to try out a few example requests!</p>
-                    <div id="route-weapons">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons" data-target=".route-weapons" data-truncate="20">GET</a> /api/weapons</h3>
-                        <pre><code class="route-weapons"></code></pre>
+                    <p>Click on the friendly <a href="#route-cars">GET</a> buttons below to try out a few example requests!</p>
+                    <div id="route-cars">
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/cars" data-target=".route-cars" data-truncate="20">GET</a> /api/cars</h3>
+                        <pre><code class="route-cars"></code></pre>
                     </div>
-                    <div id="route-weapons-2">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons/2" data-target=".route-weapons-2">GET</a> /api/weapons/2</h3>
-                        <pre><code class="route-weapons-2"></code></pre>
+                    <div id="route-cars-2">
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/cars/2" data-target=".route-cars-2">GET</a> /api/cars/2</h3>
+                        <pre><code class="route-cars-2"></code></pre>
                     </div>
-                    <div id="route-weapons-filter">
-                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3" data-target=".route-weapons-filter">GET</a> /api/weapons?filter</h3>
-                        <p>Actual request: <code>GET /api/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3</code> (The top three weapons with a range over 900m)</p>
-                        <pre><code class="route-weapons-filter"></code></pre>
+                    <div id="route-cars-filter">
+                        <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/cars?filter[order]=make&filter[where][carClass]=fullsize&filter[limit]=3" data-target=".route-cars-filter">GET</a> /api/cars?filter</h3>
+                        <p>Actual request: <code>GET /api/cars?filter[order]=make&filter[where][carClass]=fullsize&filter[limit]=3</code> (The three full size cars ordered by make)</p>
+                        <pre><code class="route-cars-filter"></code></pre>
                     </div>
                     <div id="route-locations">
                         <h3><a href="#" class="btn btn-success btn-lg" data-route="/api/locations" data-target=".route-locations" data-truncate="20">GET</a> /api/locations</h3>
