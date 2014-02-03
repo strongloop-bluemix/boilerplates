@@ -7,76 +7,74 @@ var cars = require('./cars.json');
 var customers = require('./customers.json');
 var inventory = require('./inventory.json');
 var locations = require('./locations.json');
-var loopback = require('loopback');
+// var loopback = require('loopback');
 var Inventory = require('../models/inventory');
 var Location = require('../models/location');
 var Customer = require('../models/customer');
 var Car = require('../models/car');
-var TaskEmitter = require('strong-task-emitter');
+
+var async = require('async');
+
+var events = require('events');
+var emitter = new events.EventEmitter();
+
+module.exports = emitter;
 
 var ids = {
-  location: 1,
-  car: 1,
-  inventory: 1,
-  customer: 1
 };
 
-var importer = module.exports = new TaskEmitter();
-importer.on('error', function (err) {
-  console.error('error', err);
-});
+function importData(Model, data, cb) {
 
-db.autoupdate(function () {
-  Location.destroyAll(function (err) {
+  console.log('Importing data for ' + Model.modelName);
+  Model.destroyAll(function (err) {
     if(err) {
-      console.error('Could not destroy locations.');
-      throw err;
+      cb(err);
+      return;
     }
-
-    Car.destroyAll(function (err) {
-      if(err) {
-        console.error('Could not destroy cars (PRODUCT).');
-        throw err;
+    async.each(data, function (d, callback) {
+      if(ids[Model.modelName] === undefined) {
+        ids[Model.modelName] = 1;
       }
-      
-      cars.forEach(function (car) {
-        car.id = ids.car++;
-        delete car.dealerId;
-        importer.task(Car, 'create', car);
-      });
-      
-      locations.forEach(function (loc) {
-        loc.id = ids.location++;
-        importer.task(Location, 'create', loc);
-      });
-    });
-    
-    Inventory.destroyAll(function (err) {
-      if(err) {
-        console.error('Could not destroy inventory.');
-        throw err;
-      }
-      
-      inventory.forEach(function (inv) {
-        inv.id = ids.inventory++;
-        importer.task(Inventory, 'create', inv);
-      });
-    });
-    
-    
-    
-    Customer.destroyAll(function (err) {
-      if(err) {
-        console.error('Could not destroy customers.');
-        throw err;
-      }
-      
-      customers.forEach(function (obj) {
-        obj.id = ids.customer++;
-        
-        importer.task(Customer, 'create', obj);
-      });
-    });
-   
+      d.id = ids[Model.modelName]++;
+      Model.create(d, callback);
+    }, cb);
   });
-});
+}
+
+async.series(
+  [
+    function (cb) {
+      db.autoupdate(cb);
+    },
+
+    importData.bind(null, Location, locations),
+    importData.bind(null, Car, cars),
+    importData.bind(null, Inventory, inventory),
+    importData.bind(null, Customer, customers)
+
+    /*
+    function (cb) {
+      Car.destroyAll(function (err) {
+        if(err) {
+          cb(err);
+          return;
+        }
+        async.eachSeries(cars, function (car, callback) {
+          car.id = ids.car++;
+          delete car.dealerId;
+          Car.create(car, callback);
+        }, cb);
+      });
+    },
+    */], function (err, results) {
+    if(err) {
+      console.error(err);
+      emitter.emit('error', err);
+    } else {
+      console.log('done');
+      emitter.emit('done');
+    }
+  });
+
+
+

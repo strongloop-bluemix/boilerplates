@@ -95,18 +95,19 @@ describe('REST', function() {
 
     describe('GET /api/locations/nearby', function() {
       it('should return a list of locations near given point', function(done) {
-        json('get', '/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225')
+        json('get', '/api/locations/nearby?here[lat]=37.7883415&here[lng]=-122.4209035')
           .expect(200, function(err, res) {
             var locations = res.body;
+            console.log('locations', locations);
             assert(Array.isArray(locations));
-            assert.equal(locations[0].name, 'Bay Area Firearms');
-            assert.equal(locations.length, testData.locations.length);
+            assert.equal(locations[0].name, 'City Rent-a-Car');
+            assert.equal(locations.length, 10);
             locations.forEach(function(l) {
               assert(l.geo);
               assert.equal(typeof l.geo.lat, 'number');
               assert.equal(typeof l.geo.lng, 'number');
             });
-            assert.equal(locations[locations.length - 1].city, 'Amsterdam');
+            assert.equal(locations[locations.length - 1].city, 'San Francisco');
             done();
           });
       });

@@ -8,7 +8,6 @@
 
 var fs = require('fs');
 var inventory = [];
-var weaponTotal = {};
 var request = require('request');
 
 request('http://localhost:3000/cars', {json: true}, function(err, res, cars) {

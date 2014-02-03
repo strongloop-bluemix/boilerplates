@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "supertest": "~0.8.2",
-    "mocha": "~1.15.1"
+    "mocha": "~1.15.1",
+    "async": "~0.2.10"
   },
   "repository": {
     "type": "git",
