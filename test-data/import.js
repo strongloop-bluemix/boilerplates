@@ -25,7 +25,7 @@ var ids = {
 
 function importData(Model, data, cb) {
 
-  console.log('Importing data for ' + Model.modelName);
+  // console.log('Importing data for ' + Model.modelName);
   Model.destroyAll(function (err) {
     if(err) {
       cb(err);
@@ -71,7 +71,6 @@ async.series(
       console.error(err);
       emitter.emit('error', err);
     } else {
-      console.log('done');
       emitter.emit('done');
     }
   });
