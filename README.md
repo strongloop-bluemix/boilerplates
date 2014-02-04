@@ -6,34 +6,25 @@ i-Car is an (imaginary) car rental dealer with locations in major cities around
 the world. They need to replace their existing desktop reservation system with
 a new mobile app.
 
-### What is the end user experience?
+### End user experience
 
-As a traveller with a limited budget, I need to be able to rent cars for an
-upcoming trips, so I can use them for my business trips then return them to
-avoid paying full price.
+The app enables customers to find the closest available cars using the i-Car app on a smartphone.
 
-Currently I have to make reservations from my laptop. Since my job is
-always on the trip, it isn't practical from me to always pull out my laptop to
-rent cars. I need to be able to find the closest available cars wherever I am
-and from my phone.
+The app shows a map of nearby rental locations and get a list of available cars in the area
+shown on the map on my phone.  In addition, I can 
+filter the list of cars by make, model, class, year and color.
 
-I should be able to open the i-Car Rentals App on my iPhone and see
-a map of nearby rental locations. I should be able to push a "list" button that 
-takes me to a list of available cars in the area. This area should only
-include what is visible on the map that I can manipulate. I should be able to 
-filter this list of cars by make, model, class, year and color.
-
-Once I find the car I want to reserve I should be able to select it and enter
-the quantity I want to reserve. If I am not logged in the app should prompt me 
-to register. The app should tell me if the quantity is available and if so that 
+Once I find the car I want to reserve I can select it and enter
+the quantity I want to reserve. If I am not logged in the app prompts me 
+to register. The app tells me if the quantity is available and if so that 
 my reservation has been made.
 
 ### Features
 
- - Authenticates and verifies the identity of military officials.
+ - Authenticates and verifies customers' identities.
  - Securely exposes inventory data to mobile applications.
- - Allow users to find cars available **within a specific area**.
- - Allow users to reserve cars for rental.
+ - Allow customers to find cars available **within a specific area**.
+ - Allow customers to reserve cars for rental.
 
 ### REST APIs
 
@@ -51,12 +42,12 @@ my reservation has been made.
 
 #### Customer Database
 
-All customer information is available from the SalesForce api.
+All customer information is available from the SalesForce API.
 
 #### Inventory Database
 
 All car inventory is already available in an **existing** Oracle X3-8 Exadata
-Database Machine in an extremely secure location.
+database.
 
 The Inventory DB schema looks like this:
 
