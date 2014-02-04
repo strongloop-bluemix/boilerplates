@@ -3,14 +3,16 @@
  */
 
 var db = require('../data-sources/db');
-var config = require('./ammo.json');
+var config = require('./car.json');
 
 /**
- * Ammo Model
+ * product Model
  */
 
-var Ammo = module.exports = db.createModel(
-  'ammo',
+var Car = db.createModel(
+  'car',
   config.properties,
   config.options
 );
+
+module.exports = Car;

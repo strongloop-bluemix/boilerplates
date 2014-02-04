@@ -51,6 +51,8 @@ try {
 }
 
 if (DB === 'memory') {
-  // import data
-  require('../test-data/import');
+  process.nextTick(function () {
+    // import data
+    require('../test-data/import');
+  });
 }

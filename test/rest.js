@@ -16,28 +16,30 @@ describe('REST', function() {
 
   describe('Expected Usage', function() {
 
-    describe('GET /api/weapons', function() {
-      it('should return a list of all weapons', function(done) {
-        json('get', '/api/weapons')
+    describe('GET /api/cars', function() {
+      it('should return a list of all cars', function(done) {
+        json('get', '/api/cars')
           .expect(200)
           .end(function(err, res) {
             assert(Array.isArray(res.body));
-            assert.equal(res.body.length, testData.weapons.length);
+            assert.equal(res.body.length, testData.cars.length);
 
             done();
           });
       });
     });
 
-    describe('POST /api/weapons', function() {
-      it('should create a new weapon', function(done) {
-        json('post', '/api/weapons')
+    describe('POST /api/cars', function() {
+      it('should create a new car', function(done) {
+        json('post', '/api/cars')
           .send({
-            'title': 'M1911-2',
-            'audibleRange': 52.8,
-            'effectiveRange': 50,
-            'rounds': 7,
-            'fireModes': 'Single'
+            "vin": "ebaddaa5-35bb-4b33-a388-87203acb6478",
+            "year": "2013",
+            "make": "Dodge",
+            "model": "Taurus",
+            "image": "/images/car/car_0.jpg",
+            "carClass": "suv",
+            "color": "white"
           })
           .expect(200)
           .end(function(err, res) {
@@ -48,34 +50,30 @@ describe('REST', function() {
       });
     });
 
-    describe('PUT /api/weapons/:id', function() {
-      it('should update a weapon with the given id', function(done) {
-        json('get', '/api/weapons')
+    describe('PUT /api/cars/:id', function() {
+      it('should update a car with the given id', function(done) {
+        json('get', '/api/cars')
           .expect(200, function(err, res) {
-            var weapons = res.body;
-            var weapon = weapons[0];
+            var cars = res.body;
+            var car = cars[0];
 
-            json('put', '/api/weapons/' + weapon.id)
+            json('put', '/api/cars/' + car.id)
               .send({
-                audibleRange: 999,
-                effectiveRange: weapon.effectiveRange,
-                rounds: weapon.rounds,
-                fireModes: weapon.fireModes
+                year: 2000,
+                color: 'red'
               })
               .expect(200, function(err, res) {
-                var updatedWeapon = res.body;
-                assert(updatedWeapon);
-                assert(updatedWeapon.id);
-                assert.equal(updatedWeapon.id, weapon.id);
-                assert.equal(updatedWeapon.audibleRange, 999);
-                json('get', '/api/weapons/' + weapon.id)
+                var updatedCar = res.body;
+                assert(updatedCar);
+                assert(updatedCar.id);
+                assert.equal(updatedCar.id, car.id);
+                assert.equal(updatedCar.year, 2000);
+                json('get', '/api/cars/' + car.id)
                   .expect(200, function(err, res) {
-                    var foundWeapon = res.body;
-                    assert.equal(foundWeapon.id, weapon.id);
-                    assert.equal(foundWeapon.audibleRange, 999);
-                    assert.equal(foundWeapon.effectiveRange, weapon.effectiveRange);
-                    assert.equal(foundWeapon.rounds, weapon.rounds);
-                    assert.equal(foundWeapon.fireModes, weapon.fireModes);
+                    var foundCar = res.body;
+                    assert.equal(foundCar.id, car.id);
+                    assert.equal(foundCar.year, 2000);
+                    assert.equal(foundCar.color, 'red');
                     done();
                   });
               });
@@ -97,18 +95,19 @@ describe('REST', function() {
 
     describe('GET /api/locations/nearby', function() {
       it('should return a list of locations near given point', function(done) {
-        json('get', '/api/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225')
+        json('get', '/api/locations/nearby?here[lat]=37.7883415&here[lng]=-122.4209035')
           .expect(200, function(err, res) {
             var locations = res.body;
+            console.log('locations', locations);
             assert(Array.isArray(locations));
-            assert.equal(locations[0].name, 'Bay Area Firearms');
-            assert.equal(locations.length, testData.locations.length);
+            assert.equal(locations[0].name, 'City Rent-a-Car');
+            assert.equal(locations.length, 10);
             locations.forEach(function(l) {
               assert(l.geo);
               assert.equal(typeof l.geo.lat, 'number');
               assert.equal(typeof l.geo.lng, 'number');
             });
-            assert.equal(locations[locations.length - 1].city, 'Amsterdam');
+            assert.equal(locations[locations.length - 1].city, 'San Francisco');
             done();
           });
       });
@@ -142,9 +141,9 @@ describe('REST', function() {
   });
 
   describe('Unexpected Usage', function(){
-     describe('POST /api/weapons/:id', function(){
+     describe('POST /api/cars/:id', function(){
        it('should not crash the server when posting a bad id', function(done) {
-         json('post', '/api/weapons/foobar').send({}).expect(404, done);
+         json('post', '/api/cars/foobar').send({}).expect(404, done);
        });
      });
    });

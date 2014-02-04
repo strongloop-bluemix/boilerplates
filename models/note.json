@@ -1,7 +1,7 @@
 {
-  "name": "Ammo",
+  "name": "Note",
   "options": {
-    "plural": "ammo"
+    "plural": "notes"
   },
   "properties": null
 }
