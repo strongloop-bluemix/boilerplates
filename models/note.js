@@ -3,14 +3,14 @@
  */
 
 var db = require('../data-sources/db');
-var config = require('./weapon.json');
+var config = require('./note.json');
 
 /**
- * product Model
+ * Ammo Model
  */
 
-var Weapon = module.exports = db.createModel(
-  'weapon',
+var Note = module.exports = db.createModel(
+  'note',
   config.properties,
   config.options
 );
