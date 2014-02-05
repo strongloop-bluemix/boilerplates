@@ -98,7 +98,6 @@ describe('REST', function() {
         json('get', '/api/locations/nearby?here[lat]=37.7883415&here[lng]=-122.4209035')
           .expect(200, function(err, res) {
             var locations = res.body;
-            console.log('locations', locations);
             assert(Array.isArray(locations));
             assert.equal(locations[0].name, 'City Rent-a-Car');
             assert.equal(locations.length, 10);
