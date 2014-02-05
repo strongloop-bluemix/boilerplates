@@ -1,6 +1,6 @@
 {
   "name": "sls-sample-app",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "StrongLoop Suite Sample Application",
   "main": "app.js",
   "dependencies": {
