@@ -9,15 +9,8 @@ a new mobile app.
 ### End user experience
 
 The app enables customers to find the closest available cars using the i-Car app on a smartphone.
-
-The app shows a map of nearby rental locations and get a list of available cars in the area
-shown on the map on my phone.  In addition, I can 
-filter the list of cars by make, model, class, year and color.
-
-Once I find the car I want to reserve I can select it and enter
-the quantity I want to reserve. If I am not logged in the app prompts me 
-to register. The app tells me if the quantity is available and if so that 
-my reservation has been made.
+The app shows a map of nearby rental locations and lists available cars in the area shown on the map. In addition, the customer can filter the list of cars by make, model, class, year and color.
+The customer can then select the desired car and reserve it via the app. If not logged in the app prompts the customer to login or register. The app indicates if the desired car is available and if so, confirms the reservation.
 
 ### Features
 
