@@ -21,6 +21,13 @@ fs
     app.model(require('./models/' + m));
   });
 
+// Setup LoopBack access-control
+var db = require('./data-sources/db');
+loopback.AccessToken.attachTo(db);
+loopback.Role.attachTo(db);
+loopback.ACL.attachTo(db);
+app.enableAuth();
+
 // Set up the HTTP listener ip & port
 var ip = process.env.IP || '0.0.0.0';
 var port = process.env.PORT || 3000;
@@ -35,6 +42,8 @@ app.use(loopback.methodOverride());
 
 // Establish our overly-permissive CORS rules.
 app.use(cors());
+
+app.use(loopback.token());
 
 var apiPath = '/api';
 
