@@ -59,6 +59,8 @@ function getBaseURL() {
  */
 function start() {
   request.get(getBaseURL() + '/routes', function (err, response, body) {
+    if(err)
+      throw err;
     body = toJSON(body);
 
     var routes = distillRoutes(body);
