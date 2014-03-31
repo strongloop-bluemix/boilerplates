@@ -22,6 +22,8 @@ testData = {
 };
 
 before(function(done) {
+  this.timeout(50000);
+  console.error('Importing test data, this may take long time.');
   importer.on('error', done);
   importer.on('done', done);
 });

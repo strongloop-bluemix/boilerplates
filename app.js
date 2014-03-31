@@ -21,6 +21,16 @@ fs
     app.model(require('./models/' + m));
   });
 
+// Setup LoopBack access-control
+var db = require('./data-sources/db');
+loopback.AccessToken.attachTo(db);
+loopback.Role.attachTo(db);
+loopback.ACL.attachTo(db);
+loopback.RoleMapping.attachTo(db);
+app.dataSources.db = db;
+
+app.enableAuth();
+
 // Set up the HTTP listener ip & port
 var ip = process.env.IP || '0.0.0.0';
 var port = process.env.PORT || 3000;
@@ -35,6 +45,8 @@ app.use(loopback.methodOverride());
 
 // Establish our overly-permissive CORS rules.
 app.use(cors());
+
+app.use(loopback.token());
 
 var apiPath = '/api';
 
@@ -70,11 +82,20 @@ app.use(loopback.urlNotFound());
 // The ultimate error handler.
 app.use(loopback.errorHandler());
 
-// Start the server
-app.listen(port, ip, function() {
-  if(process.env.C9_PROJECT) {
-    // Customize the url for the Cloud9 environment
-    baseURL = 'https://' + process.env.C9_PROJECT + '-c9-' + process.env.C9_USER + '.c9.io';
-  }
-  console.error('StrongLoop Suite sample is now ready at ' + baseURL);
-});
+app.start = function() {
+  // Start the server
+  return app.listen(port, ip, function() {
+    if(process.env.C9_PROJECT) {
+      // Customize the url for the Cloud9 environment
+      baseURL = 'https://' + process.env.C9_PROJECT + '-c9-' + process.env.C9_USER + '.c9.io';
+    }
+    console.error('StrongLoop Suite sample is now ready at ' + baseURL);
+  });
+};
+
+// Optionally start the server
+// (only if this module is the main module)
+if(require.main === module) {
+  app.start();
+}
+
