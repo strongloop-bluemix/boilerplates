@@ -34,7 +34,7 @@ app.enableAuth();
 // Set up the HTTP listener ip & port
 var ip = process.env.IP || '0.0.0.0';
 var port = process.env.PORT || 3000;
-var baseURL = 'http://' + ip + ':' + port;
+var baseURL = 'http://' + (ip === '0.0.0.0' ? 'localhost' : ip) + ':' + port;
 app.set('ip', ip);
 app.set('port', port);
 
@@ -89,7 +89,7 @@ app.start = function() {
       // Customize the url for the Cloud9 environment
       baseURL = 'https://' + process.env.C9_PROJECT + '-c9-' + process.env.C9_USER + '.c9.io';
     }
-    console.error('StrongLoop Suite sample is now ready at ' + baseURL);
+    console.error('LoopBack sample is now ready at ' + baseURL);
   });
 };
 
