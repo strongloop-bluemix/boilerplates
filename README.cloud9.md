@@ -31,9 +31,9 @@ fix that:
 ## Running and Viewing the SLS Sample Application
 
 Remember that friendly, green "Run" button in the main menu? Go ahead and give
-'er a click. The SLS (StrongLoop Suite) Sample App should begin running, and
-the bottom Output tab should become visible. If not, select Output in the bottom
-pane and take note of a few things:
+'er a click. The LoopBack Sample App should begin running, and the bottom Output
+tab should become visible. If not, select Output in the bottom pane and take
+note of a few things:
 
 ```
 Your code is running at 'http://strongloop.soandso.cloud9beta.com'.
