@@ -137,6 +137,57 @@ describe('REST', function() {
     //   });
     // });
 
+    describe('/api/customers', function() {
+      var credentials = { email: 'a-@example.com', password: 'a-password' };
+      var customer;
+      var token;
+      it('should create new customer on POST', function(done) {
+        json('post', '/api/customers')
+          .send(credentials)
+          .expect(200, function(err, res) {
+            if (err) return done(err);
+            customer = res.body;
+            assert.equal(customer.email, credentials.email);
+            done();
+          });
+      });
+
+      it('should login existing customer on POST /api/customers/login', function(done) {
+        json('post', '/api/customers/login')
+          .send(credentials)
+          .expect(200, function(err, res) {
+            if (err) return done(err);
+            token = res.body;
+            assert.equal(token.userId, customer.id);
+            done();
+          });
+      });
+
+      it('should allow GET /api/customers/{my-id}', function(done) {
+        json('get', '/api/customers/' + customer.id)
+          .set('Authorization', token.id)
+          .expect(200, function(err, res) {
+            if (err) return done(err);
+            assert.equal(customer.email, res.body.email);
+            done();
+          });
+      });
+
+      it('should not allow GET /api/customers/{another-id}', function(done) {
+        json('get', '/api/customers/' + (customer.id + 1000))
+          .set('Authorization', token.id)
+          .expect(401, function(err) {
+            done(err);
+          });
+      });
+
+      it('should logout existing customer on POST /api/customers/logout', function(done) {
+        json('post', '/api/customers/logout')
+          .set('Authorization', token.id)
+          .send({})
+          .expect(204, done);
+      });
+    });
   });
 
   describe('Unexpected Usage', function(){

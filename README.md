@@ -1,4 +1,4 @@
-## StrongLoop Suite Sample Application
+## LoopBack Sample Application
 
 ### i-Car Rentals Corp
 
@@ -8,9 +8,13 @@ a new mobile app.
 
 ### End user experience
 
-The app enables customers to find the closest available cars using the i-Car app on a smartphone.
-The app shows a map of nearby rental locations and lists available cars in the area shown on the map. In addition, the customer can filter the list of cars by make, model, class, year and color.
-The customer can then select the desired car and reserve it via the app. If not logged in the app prompts the customer to login or register. The app indicates if the desired car is available and if so, confirms the reservation.
+The app enables customers to find the closest available cars using the i-Car app
+on a smartphone. The app shows a map of nearby rental locations and lists
+available cars in the area shown on the map. In addition, the customer can
+filter the list of cars by make, model, class, year and color. The customer can
+then select the desired car and reserve it via the app. If not logged in the app
+prompts the customer to login or register. The app indicates if the desired car
+is available and if so, confirms the reservation.
 
 ### Features
 

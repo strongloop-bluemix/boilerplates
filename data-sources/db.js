@@ -17,8 +17,9 @@ if (!config) {
 
 console.error('Using the %s connector.', DB);
 console.error('To specify another connector:');
-console.error('  DB=oracle node app');
-console.error('  DB=mongodb node app');
+console.error('  DB=oracle node app or DB=oracle slc run app.js');
+console.error('  DB=mongodb node app or DB=mongodb slc run app.js');
+console.error('  DB=mysql node app or DB=mysql slc run app.js');
 
 switch (DB) {
   case 'oracle':

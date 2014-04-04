@@ -6,7 +6,14 @@
       "schema": "BLACKPOOL",
       "table": "CUSTOMER"
     },
-    "extend": "User"
+    "extend": "User",
+    "relations": {
+      "accessTokens": {
+        "model": "AccessToken",
+        "type": "hasMany",
+        "foreignKey": "userId"
+      }
+    }
   },
   "properties": {
     "id": {
