@@ -1,8 +1,9 @@
 # Welcome to the StrongLoop Cloud Experience!
 
-This Cloud 9 Workspace contains the StrongLoop Suite distribution in its entirety
+This Cloud 9 Workspace contains several StrongLoop products including slc (CLI),
+LoopBack (API Server) and the StrongOps agent (DevOps and Performance Monitoring) 
 for you to try in the cloud (Cloud 9, to be exact) before [downloading and
-installing](http://www.strongloop.com/get-started) the distro on your own.
+installing](http://www.strongloop.com/get-started) them on your own.
 
 ## Before You Begin
 
