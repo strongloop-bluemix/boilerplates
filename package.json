@@ -1,9 +1,10 @@
 {
   "name": "sls-sample-app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "LoopBack Sample Application",
   "main": "app.js",
   "dependencies": {
+    "async": "~0.2.10",
     "loopback": "~1.7.0",
     "request": "~2.34.0",
     "strong-task-emitter": "~0.0.5",
@@ -22,8 +23,7 @@
   },
   "devDependencies": {
     "supertest": "~0.9.0",
-    "mocha": "~1.17.1",
-    "async": "~0.2.10"
+    "mocha": "~1.17.1"
   },
   "repository": {
     "type": "git",
