@@ -1,6 +1,6 @@
 {
   "name": "sls-sample-app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "LoopBack Sample Application",
   "main": "app.js",
   "dependencies": {
