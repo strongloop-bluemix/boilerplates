@@ -1,30 +1,30 @@
 {
   "name": "sls-sample-app",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "LoopBack Sample Application",
   "main": "app.js",
   "dependencies": {
     "async": "~0.9.0",
-    "loopback": "~1.8.2",
-    "loopback-datasource-juggler": "~1.5.0",
+    "loopback": "~1.9.1",
+    "loopback-datasource-juggler": "~1.6.2",
     "request": "~2.36.0",
     "strong-task-emitter": "~0.0.5",
-    "rc": "~0.3.5",
+    "rc": "~0.4.0",
     "cors": "~2.3.1",
-    "loopback-explorer": "~1.1.0",
+    "loopback-explorer": "~1.1.1",
     "loopback-connector-rest": "~1.1.4"
   },
   "optionalDependencies": {
-    "loopback-connector-oracle": "~1.2.1",
-    "loopback-connector-mongodb": "~1.2.5",
-    "loopback-connector-mysql": "~1.2.1",
+    "loopback-connector-oracle": "~1.4.1",
+    "loopback-connector-mongodb": "~1.4.1",
+    "loopback-connector-mysql": "~1.4.1",
     "weighted": "~0.2.2",
     "shuffle": "~0.2.1",
     "text-table": "~0.2.0"
   },
   "devDependencies": {
-    "supertest": "~0.12.1",
-    "mocha": "~1.19.0"
+    "supertest": "~0.13.0",
+    "mocha": "~1.20.1"
   },
   "repository": {
     "type": "git",
