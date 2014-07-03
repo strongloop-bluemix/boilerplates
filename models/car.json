@@ -2,7 +2,7 @@
   "name": "car",
   "options": {
     "oracle": {
-      "schema": "BLACKPOOL",
+      "schema": "DEMO",
       "table": "PRODUCT"
     },
     "relations": {
