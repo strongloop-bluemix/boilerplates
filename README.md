@@ -116,31 +116,24 @@ Google's location API is used to return the users city from a given zip or lat/l
 By default, the sample application uses the memory connector and listen on
 http://0.0.0.0:3000.
  
-> node app
+> node .
 
 Open browser and point it to http://127.0.0.1:3000.
 
-You can configure other data sources by adding the following json into `.loopbackrc`
-at the root of the module.
+You can configure other data sources by adding a new key to `DATASTORES`
+object in `rest/datasources.local.js`:
 
-    {
-        "demo": {
-            "memory": {},
-            "oracle": {
-                "host": "your-oracle-server-ip-or-hostname",
-                "port": 1521,
-                "database": "XE",
-                "username": "demo",
-                "password": "password"
-            },
-            "mongodb": {
-                "host": "your-mongodb-server-ip-or-hostname",
-                "database": "demo",
-                "username": "demo",
-                "password": "password",
-                "port": 27017
-            }
-        }
+```js
+var DATASTORES = {
+  custom: {
+    connector: 'my-custom-connector',
+    // configuration for the custom connector
+  },
+  memory: {
+  },
+  // etc.
+};
+```
     }
 
 The sample can be configured using the following environment variables:
@@ -153,9 +146,9 @@ For example,
 
 To run the application at port 3001 with MongoDB:
 
-> DB=mongodb PORT=3001 node app
+> DB=mongodb PORT=3001 node .
 
 To run the application at port 3002 with Oracle:
 
-> DB=oracle PORT=3002 node app
+> DB=oracle PORT=3002 node .
 

@@ -1,7 +1,13 @@
 {
   "name": "Location",
+  "idInjection": false,
   "options": {
-    "idInjection": false,
+    "mysql": {
+      "table": "location"
+    },
+    "mongodb": {
+      "collection": "location"
+    },
     "oracle": {
       "schema": "BLACKPOOL",
       "table": "LOCATION"
@@ -10,8 +16,8 @@
   "properties": {
     "id": {
       "type": "String",
+      "id": true,
       "length": 20,
-      "id": 1,
       "oracle": {
         "columnName": "ID",
         "dataType": "VARCHAR2",
@@ -21,7 +27,6 @@
     },
     "street": {
       "type": "String",
-      "required": false,
       "length": 64,
       "oracle": {
         "columnName": "STREET",
@@ -32,7 +37,6 @@
     },
     "city": {
       "type": "String",
-      "required": false,
       "length": 64,
       "oracle": {
         "columnName": "CITY",
@@ -43,7 +47,6 @@
     },
     "zipcode": {
       "type": "Number",
-      "required": false,
       "length": 20,
       "oracle": {
         "columnName": "ZIPCODE",
@@ -54,7 +57,6 @@
     },
     "name": {
       "type": "String",
-      "required": false,
       "length": 32,
       "oracle": {
         "columnName": "NAME",
@@ -66,5 +68,14 @@
     "geo": {
       "type": "GeoPoint"
     }
-  }
+  },
+  "validations": [],
+  "relations": {
+    "inventory": {
+      "type": "hasMany",
+      "model": "Inventory"
+    }
+  },
+  "acls": [],
+  "methods": []
 }

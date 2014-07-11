@@ -1,25 +1,24 @@
 {
   "name": "Customer",
+  "base": "User",
+  "idInjection": false,
   "options": {
-    "idInjection": false,
+    "mysql": {
+      "table": "customer"
+    },
+    "mongodb": {
+      "collection": "customer"
+    },
     "oracle": {
       "schema": "BLACKPOOL",
       "table": "CUSTOMER"
-    },
-    "extend": "User",
-    "relations": {
-      "accessTokens": {
-        "model": "AccessToken",
-        "type": "hasMany",
-        "foreignKey": "userId"
-      }
     }
   },
   "properties": {
     "id": {
       "type": "String",
+      "id": true,
       "length": 20,
-      "id": 1,
       "oracle": {
         "columnName": "ID",
         "dataType": "VARCHAR2",
@@ -29,7 +28,6 @@
     },
     "name": {
       "type": "String",
-      "required": false,
       "length": 40,
       "oracle": {
         "columnName": "NAME",
@@ -38,5 +36,9 @@
         "nullable": "Y"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
 }
