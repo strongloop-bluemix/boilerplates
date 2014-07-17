@@ -1,7 +1,21 @@
 {
-  "camelcase": true
-  , "quotmark": "single"
-  , "eqnull": true
-  , "node": true
-  , "laxcomma": true
+  "node": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": "nofunc",
+  "newcap": true,
+  "nonew": true,
+  "noarg": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "sub": true,
+  "maxlen": 80
 }

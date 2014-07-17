@@ -1,0 +1,17 @@
+{
+  "name": "Note",
+  "plural": "notes",
+  "options": {
+    "mysql": {
+      "table": "note"
+    },
+    "mongodb": {
+      "collection": "note"
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

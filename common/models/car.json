@@ -1,16 +1,15 @@
 {
-  "name": "car",
+  "name": "Car",
   "options": {
+    "mysql": {
+      "table": "car"
+    },
+    "mongodb": {
+      "collection": "car"
+    },
     "oracle": {
       "schema": "DEMO",
       "table": "PRODUCT"
-    },
-    "relations": {
-      "reservations": {
-        "model": "reservation",
-        "type": "hasMany",
-        "foreignKey": "productId"
-      }
     }
   },
   "properties": {
@@ -39,6 +38,15 @@
     "color": {
       "type": "string"
     }
-
-  }
+  },
+  "validations": [],
+  "relations": {
+    "reservations": {
+      "type": "hasMany",
+      "model": "Reservation",
+      "foreignKey": "productId"
+    }
+  },
+  "acls": [],
+  "methods": []
 }
