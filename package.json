@@ -34,7 +34,7 @@
   "author": "Miroslav Bajtos <miroslav@strongloop.com>",
   "license": {
     "name": "MIT",
-    "url": "https://github.com/strongloop/sls-sample-app/blob/master/LICENSE"
+    "url": "https://github.com/strongloop/loopback-example-app/blob/master/LICENSE"
    },
   "scripts": {
     "test": "mocha -R spec server/test",
