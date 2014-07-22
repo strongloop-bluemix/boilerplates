@@ -1,6 +1,7 @@
 {
   "name": "Inventory",
   "plural": "inventory",
+  "base": "PersistedModel",
   "idInjection": false,
   "options": {
     "mysql": {
