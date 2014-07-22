@@ -1,5 +1,6 @@
 {
   "name": "Car",
+  "base": "PersistedModel",
   "options": {
     "mysql": {
       "table": "car"

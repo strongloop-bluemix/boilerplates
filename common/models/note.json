@@ -1,6 +1,7 @@
 {
   "name": "Note",
   "plural": "notes",
+  "base": "PersistedModel",
   "options": {
     "mysql": {
       "table": "note"
