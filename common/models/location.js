@@ -53,7 +53,7 @@ module.exports = function(RentalLocation) {
       description: 'Find nearby locations around the geo point',
       accepts: [
         {arg: 'here', type: 'GeoPoint', required: true,
-          description: 'geo location (lat & lng)'},
+          description: 'geo location (lng & lat)'},
         {arg: 'page', type: 'Number',
           description: 'number of pages (page size=10)'},
         {arg: 'max', type: 'Number',
