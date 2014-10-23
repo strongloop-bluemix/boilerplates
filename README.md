@@ -8,7 +8,18 @@ i-Car is an (imaginary) car rental dealer with locations in major cities around
 the world. They need to replace their existing desktop reservation system with
 a new mobile app.
 
-## End user experience
+### Run the application
+
+Start the application back-end by running the following command:
+
+```
+$ slc run 
+```
+
+Now open your browser and point it to
+[http://127.0.0.1:3000](http://127.0.0.1:3000) to access the application UI.
+
+### End user experience
 
 The app enables customers to find the closest available cars using the i-Car app
 on a smartphone. The app shows a map of nearby rental locations and lists
@@ -18,7 +29,7 @@ then select the desired car and reserve it via the app. If not logged in the app
 prompts the customer to login or register. The app indicates if the desired car
 is available and if so, confirms the reservation.
 
-## Features
+### Features
 
  - Authenticates and verifies customers' identities.
  - Securely exposes inventory data to mobile applications.
@@ -37,18 +48,7 @@ is available and if so, confirms the reservation.
  - `/users/login` allows a customer to login
  - `/users/logout` allows a customer to logout
 
-## Configure and run the application
-
-Start the application back-end by running the following command:
-
-```
-$ node .
-```
-
-Now open your browser and point it to
-[http://127.0.0.1:3000](http://127.0.0.1:3000) to access the application UI.
-
-## Configuration
+## Configuring the data source
 
 By default, the sample application uses the memory connector and listens on
 the port 3000 on all network interfaces.
@@ -90,11 +90,11 @@ For example,
   ```
 
 
-## Infrastructure
+## Schema and specifications
 
 ### Customer Database
 
-All customer information is available from the SalesForce API.
+The ap will get all customer information from the SalesForce API.
 
 ### Inventory Database
 
