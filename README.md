@@ -1,16 +1,16 @@
-## LoopBack Sample Application
+# LoopBack Sample Application
 
-This example application was scaffolded with the help of `slc loopback` (which is 
+This example application was scaffolded with `slc loopback` (which is 
 equivalent to `yo loopback`. Refer to the section 
 [Building from scratch](building-from-scratch) below for more details.
 
-### i-Car Rentals Corp
+## i-Car Rentals Corp
 
 i-Car is an (imaginary) car rental dealer with locations in major cities around
 the world. They need to replace their existing desktop reservation system with
 a new mobile app.
 
-### End user experience
+## End user experience
 
 The app enables customers to find the closest available cars using the i-Car app
 on a smartphone. The app shows a map of nearby rental locations and lists
@@ -20,14 +20,14 @@ then select the desired car and reserve it via the app. If not logged in the app
 prompts the customer to login or register. The app indicates if the desired car
 is available and if so, confirms the reservation.
 
-### Features
+## Features
 
  - Authenticates and verifies customers' identities.
  - Securely exposes inventory data to mobile applications.
  - Allow customers to find cars available **within a specific area**.
  - Allow customers to reserve cars for rental.
 
-### REST APIs
+## REST APIs
 
  - `/cars` exposes a queryable (filter, sort) collection of available cars
     over HTTP / JSON
@@ -39,7 +39,7 @@ is available and if so, confirms the reservation.
  - `/users/login` allows a customer to login
  - `/users/logout` allows a customer to logout
 
-### Configure and run the application
+## Configure and run the application
 
 Start the application back-end by running the following command:
 
@@ -50,7 +50,7 @@ $ node .
 Now open your browser and point it to
 [http://127.0.0.1:3000](http://127.0.0.1:3000) to access the application UI.
 
-#### Configuration
+## Configuration
 
 By default, the sample application uses the memory connector and listens on
 the port 3000 on all network interfaces.
@@ -92,20 +92,20 @@ For example,
   ```
 
 
-### Infrastructure
+## Infrastructure
 
-#### Customer Database
+### Customer Database
 
 All customer information is available from the SalesForce API.
 
-#### Inventory Database
+### Inventory Database
 
 All car inventory is already available in an **existing** Oracle X3-8 Exadata
 database.
 
 The Inventory DB schema looks like this:
 
-##### **Customers**
+#### **Customers**
  - id string
  - name string
  - username string
@@ -120,7 +120,7 @@ The Inventory DB schema looks like this:
  - created date
  - lastupdated date
  
-##### **Reservations**
+#### **Reservations**
  - id string
  - product_id string
  - location_id string
@@ -131,14 +131,14 @@ The Inventory DB schema looks like this:
  - pickup_date date
  - return_date date
 
-##### **Inventory_Levels**
+#### **Inventory_Levels**
  - id string
  - product_id string
  - location_id string
  - available number
  - total number
  
-##### **Car**
+#### **Car**
 - id string
 - vin string
 - year number
@@ -148,7 +148,7 @@ The Inventory DB schema looks like this:
 - carClass string
 - color string
  
-##### **Location**
+#### **Location**
  - id string
  - street string
  - city string
@@ -156,7 +156,7 @@ The Inventory DB schema looks like this:
  - name string
  - geo GeoPoint
 
-##### **Inventory_View**
+#### **Inventory_View**
 
 **View** to return qty of available products for the given city.
 
@@ -164,11 +164,11 @@ The Inventory DB schema looks like this:
  - location (location name)
  - available (qty available)
 
-#### Geo Lookup
+### Geo Lookup
 
 Google's location API is used to return the users city from a given zip or lat/long.
 
-### Project files
+## Project files
 
 The project is composed from multiple components.
 
@@ -193,7 +193,7 @@ Refer to
 [Creating a LoopBack application](http://docs.strongloop.com/display/LB/Creating+a+LoopBack+application)
 for more information.
 
-### Building from scratch
+## Building from scratch
 
 Most of the sample application can be scaffolded using loopback's yeoman
 generators. The generator module can be installed from npm:
