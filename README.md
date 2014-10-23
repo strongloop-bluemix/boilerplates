@@ -1,5 +1,3 @@
-# LoopBack Sample Application
-
 This example application was scaffolded with `slc loopback` (which is 
 equivalent to `yo loopback`. Refer to the section 
 [Building from scratch](#building-from-scratch) below for more details.
