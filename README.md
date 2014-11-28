@@ -204,7 +204,7 @@ Once you have the generators installed, run the following command to recreate
 the sample app from scratch:
 
 ```
-$ slc loopback:example -l
+$ slc loopback:example example-app -l
 ```
 
 This will call other generators like `slc loopback` and `slc loopback:model`
