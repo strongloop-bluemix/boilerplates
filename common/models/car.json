@@ -41,13 +41,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "reservations": {
-      "type": "hasMany",
-      "model": "Reservation",
-      "foreignKey": "productId"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }
