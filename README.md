@@ -188,7 +188,7 @@ The project is composed from multiple components.
   the expected API.
 
 Refer to
-[Creating a LoopBack application](http://docs.strongloop.com/display/LB/Creating+a+LoopBack+application)
+[Creating an application](http://docs.strongloop.com/display/LB/Creating+an+application)
 for more information.
 
 ## Building from scratch
@@ -208,9 +208,8 @@ $ slc loopback:example example-app -l
 ```
 
 This will call other generators like `slc loopback` and `slc loopback:model`
-to scaffold the application. You can learn more about these generators in our
-documentation:
-[Yeoman generators](http://docs.strongloop.com/display/LB/Yeoman+generators).
+to scaffold the application. You can learn more about these generators in the 
+[slc command-line reference](http://docs.strongloop.com/pages/viewpage.action?pageId=3836281).
 
 When run with the `-l` option, the example generator
 prints a detailed list of steps that are executed to walk you trough the
