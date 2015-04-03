@@ -38,7 +38,7 @@ module.exports = function(RentalLocation) {
     lookupGeo(loc.street, loc.city, loc.state,
       function(err, result) {
         if (result && result[0]) {
-          loc.geo = result[0].lng + ',' + result[0].lat;
+          loc.geo = result[0];
           next();
         } else {
           next(new Error('could not find location'));
