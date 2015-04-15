@@ -13,7 +13,7 @@ a new mobile app.
 Start the application back-end by running the following command:
 
 ```
-$ slc run 
+$ node . 
 ```
 
 Now open your browser and point it to
