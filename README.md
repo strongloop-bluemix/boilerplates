@@ -1,12 +1,23 @@
-This example application was scaffolded with `slc loopback` (which is 
-equivalent to `yo loopback`. Refer to the section 
-[Building from scratch](#building-from-scratch) below for more details.
+## Prerequisites
+
+You must have already installed Node.js.
+
+Install StrongLoop:
+```
+$ npm install -g strongloop
+```
+
+If you run into any issues, see [Installing StrongLoop](http://docs.strongloop.com/display/LB/Installing+StrongLoop)
+for more information.
 
 ## i-Car Rentals Corp
 
 i-Car is an (imaginary) car rental dealer with locations in major cities around
 the world. They need to replace their existing desktop reservation system with
 a new mobile app.
+
+This application was created using LoopBack tools. 
+See [Building from scratch](#building-from-scratch) below for more details.
 
 ### Run the application
 
@@ -193,12 +204,11 @@ for more information.
 
 ## Building from scratch
 
-Most of the sample application can be scaffolded using loopback's yeoman
-generators. The generator module can be installed from npm:
+You can create most of the sample application using LoopBack's Yeoman generators. 
+See the `slc loopback` [command-line reference](http://docs.strongloop.com/pages/viewpage.action?pageId=3836281)
+for more information.
 
-```
-$ npm install -g generator-loopback
-```
+Install StrongLoop with `npm install -g strongloop` to install the LoopBack generators.
 
 Once you have the generators installed, run the following command to recreate
 the sample app from scratch:
