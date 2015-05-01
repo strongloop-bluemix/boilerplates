@@ -1,6 +1,6 @@
 ## Prerequisites
 
-You must have already installed Node.js.
+You must have already installed [Node.js](https://nodejs.org/).
 
 Install StrongLoop:
 ```
