@@ -31,7 +31,10 @@ module.exports = function(RentalLocation) {
     geoService.geocode.apply(geoService, arguments);
   });
 
-  RentalLocation.beforeSave = function(next, loc) {
+  RentalLocation.observe('before save', function(ctx, next) {
+
+    var loc = ctx.instance || ctx.data;
+
     if (loc.geo) return next();
 
     // geo code the address
@@ -44,7 +47,7 @@ module.exports = function(RentalLocation) {
           next(new Error('could not find location'));
         }
       });
-  };
+  });
 
   RentalLocation.setup = function() {
     RentalLocation.base.setup.apply(this, arguments);
