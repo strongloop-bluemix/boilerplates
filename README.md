@@ -105,7 +105,7 @@ For example,
 
 ### Customer Database
 
-The ap will get all customer information from the SalesForce API.
+The app will get all customer information from the SalesForce API.
 
 ### Inventory Database
 
