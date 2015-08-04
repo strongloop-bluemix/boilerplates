@@ -27,7 +27,7 @@ module.exports = function(app, cb) {
         cb(err);
         return;
       }
-      async.each(data, function(d, callback) {
+      async.eachLimit(data, 32, function(d, callback) {
         if (ids[Model.modelName] === undefined) {
           // The Oracle data has Location with ids over 80
           // and the index.html depends on location 88 being present

@@ -10,7 +10,7 @@
       "collection": "customer"
     },
     "oracle": {
-      "schema": "BLACKPOOL",
+      "schema": "DEMO",
       "table": "CUSTOMER"
     }
   },

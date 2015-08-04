@@ -11,7 +11,7 @@
       "collection": "inventory"
     },
     "oracle": {
-      "schema": "BLACKPOOL",
+      "schema": "DEMO",
       "table": "INVENTORY"
     }
   },

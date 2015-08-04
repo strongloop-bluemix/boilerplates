@@ -10,7 +10,7 @@
       "collection": "location"
     },
     "oracle": {
-      "schema": "BLACKPOOL",
+      "schema": "DEMO",
       "table": "LOCATION"
     }
   },
