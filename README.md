@@ -1,3 +1,5 @@
+**NOTE: This app has not been fully migrated to LoopBack 2.0**
+
 ## Prerequisites
 
 You must have already installed [Node.js](https://nodejs.org/).
