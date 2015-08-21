@@ -1,0 +1,5 @@
+---
+applications:
+- name: coffeemaker
+  buildpack: https://github.com/svennam92/nodejs-buildpack
+  memory: 1G
