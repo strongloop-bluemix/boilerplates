@@ -1,0 +1,19 @@
+---
+stages:
+- name: Deploy
+  inputs:
+  - type: git
+    branch: master
+  triggers:
+  - type: commit
+  jobs:
+  - name: Push to Bluemix
+    type: deployer
+    target:
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
+    script: |
+      cf push "${CF_APP}" -b https://github.com/svennam92/nodejs-buildpack
+      cf map-route "${CF_APP}" mybluemix.net -n "${CF_APP}"-pm 
