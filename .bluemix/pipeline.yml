@@ -34,6 +34,6 @@ stages:
     script: |
       cd .bluemix
       cf push "${CF_APP}"-arc -n "${CF_APP}"-arc -b https://github.com/programsam/nodejs-buildpack --no-start
-      cf set-env "${CF_APP}" STRONGLOOP_PM_HOSTNAME "${CF_APP}"-pm
-      cf start "${CF_APP}"
+      cf set-env "${CF_APP}"-arc STRONGLOOP_PM_HOSTNAME "${CF_APP}"-pm
+      cf start "${CF_APP}"-arc
       
