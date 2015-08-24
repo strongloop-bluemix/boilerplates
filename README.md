@@ -5,10 +5,11 @@ This is a sample LoopBack Node.js application which will use a modified [Node.js
 
 ### Deploy to Bluemix
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/svennam92/loopback-example-app)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/programsam/loopback-example-app)
 
 When you click this button, Bluemix will clone this repository into an IBM DevOps Services project, set up the deployment pipeline, and push your application to Bluemix.  Your application will get deployed with two routes.
 ```
+<app_name>-arc.mybluemix.net	 # To access Arc for managing your application
 <app_name>.mybluemix.net         # To access your sample application
 <app_name>-pm.mybluemix.net      # To access Strong PM
 ```
