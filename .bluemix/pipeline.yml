@@ -21,11 +21,11 @@ stages:
   inputs:
   - type: git
     branch: master
+  triggers:
+    - type: stage
   jobs:
   - name: Push Arc to Bluemix
     type: deployer
-    triggers:
-    - type: stage
     target:
       url: ${CF_TARGET_URL}
       organization: ${CF_ORGANIZATION}
