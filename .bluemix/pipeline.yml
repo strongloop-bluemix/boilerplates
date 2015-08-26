@@ -15,7 +15,7 @@ stages:
       space: ${CF_SPACE}
       application: ${CF_APP}
     script: |
-      cf push "${CF_APP}" -c "node strong-proxy/app.js & ; node node_modules/strong-start/bin/sl-start.js ./"
+      cf push "${CF_APP}" 
       cf map-route "${CF_APP}" mybluemix.net -n "${CF_APP}"-pm 
 #- name: Deploy Arc
 #  inputs:
