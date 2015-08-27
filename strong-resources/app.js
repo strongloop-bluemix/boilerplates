@@ -16,7 +16,8 @@ var server = http.createServer(function(req, res) {
 	if (req.headers.host.indexOf('-pm.') != -1){
 		proxy.web(req, res, { target: 'http://127.0.0.1:8701' });
 	}
-	else if (process.env.PM_URL === req.headers.host){
+	// specify something like myapp-pm.mybluemix.net
+	else if (req.headers.host.indexOf(process.env.PM_URL) != -1){
 		proxy.web(req, res, { target: 'http://127.0.0.1:8701' });
 	}
 	else
