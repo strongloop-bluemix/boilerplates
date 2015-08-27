@@ -3,7 +3,7 @@
 	"services" : [],
 	"type" : "web",
 	"version" : "1.0",
-    "defaultMemory": 256,
+    "defaultMemory": 512,
 	"description" : "A loopback application that will get you up and running quickly.",
 	"smallIcon" : "powered-by-LB-xs.png",
 	"icon" : "powered-by-LB-xs.png",
