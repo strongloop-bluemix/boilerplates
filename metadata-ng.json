@@ -1,0 +1,24 @@
+{
+	"name" : "Loopback",
+	"services" : [],
+	"type" : "web",
+	"version" : "1.0",
+	"description" : "A loopback application that will get you up and running quickly.",
+	"smallIcon" : "LoopbackOverviewPNG.png",
+	"icon" : "LoopbackOverviewPNG.png",
+	"largeIcon" : "LoopbackOverviewPNG.png",
+	"featuredIcon" : "LoopbackOverviewPNG.png",
+	"system_tags": ["ibm_created"],
+    "categories": ["boilerplate"],
+    "runtime_template_id": "nodejsHelloWorld",
+	"metadata" : {
+		"termsUrl" : "https://www.ibm.com/software/sla/sladb.nsf/sla/bm-6626-01"
+	},
+	"source" : {
+		"scmType" : "git",
+		"url" : "https://github.com/rvennam/loopback-example-app.git",
+		"appPath" : ""
+	},
+	"docURL": "/#starters/nodejs/index.html#nodejs"
+
+}
