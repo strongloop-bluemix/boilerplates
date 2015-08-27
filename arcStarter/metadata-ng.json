@@ -1,0 +1,30 @@
+{
+	"name" : "Arc",
+	"services" : [],
+	"type" : "web",
+	"version" : "1.0",
+    "defaultMemory": 512,
+	"description" : "An Arc application that will get you up and running quickly.",
+	"smallIcon" : "arc.png",
+	"icon" : "arc.png",
+	"largeIcon" : "arc.png",
+	"featuredIcon" : "arc.png",
+	"system_tags": ["ibm_created"],
+    "categories": ["boilerplate"],
+    "runtime_id": "763dcb4a-8642-4676-ae17-ca5bd032ad9e",
+	"runtime_template_id": "nodejsHelloWorld", 
+	"runtime": {
+        "name": "SDK for Node.js™"
+    },
+    "metadata": {
+        "termsUrl": "https://www.ibm.com/software/sla/sladb.nsf/sla/bm-6622-01",
+		"bssRuntimeName": "sdk-for-nodejs"
+    },
+	"source" : {
+		"scmType" : "git",
+		"url" : "https://github.com/rvennam/arc-app.git",
+		"appPath" : ""
+	},
+	"docURL": "/#starters/nodejs/index.html#nodejs"
+
+}
