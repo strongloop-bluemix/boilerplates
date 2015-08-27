@@ -1,24 +1,22 @@
 var http = require('http'),
 httpProxy = require('http-proxy');
 
-//
 // Create a proxy server with custom application logic
-//
 var proxy = httpProxy.createProxyServer({});
 proxy.on('error', function (err, req, res) {
 	  res.writeHead(500, {
 	    'Content-Type': 'text/plain'
 	  });
-
-	  res.end('Something went wrong. And we are reporting a custom error message.');
+	  res.end(err);
 	}); 
-//
-// Create your custom server and just call `proxy.web()` to proxy
-// a web request to the target passed in the options
-// also you can use `proxy.ws()` to proxy a websockets request
-//
+
+// If "-pm" is at the end of the app/domain name, or PM_URL matches the route,
+// proxy to the Process Manager. Otherwise, proxy to the application itself
 var server = http.createServer(function(req, res) {
-	if (req.headers.host.indexOf('pm') != -1){
+	if (req.headers.host.indexOf('-pm.') != -1){
+		proxy.web(req, res, { target: 'http://127.0.0.1:8701' });
+	}
+	else if (process.env.PM_URL === req.headers.host){
 		proxy.web(req, res, { target: 'http://127.0.0.1:8701' });
 	}
 	else
