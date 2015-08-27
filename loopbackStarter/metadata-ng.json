@@ -1,9 +1,9 @@
 {
-	"name" : "Loopback",
+	"name" : "Loopback Starter",
 	"services" : [],
 	"type" : "web",
 	"version" : "1.0",
-    "defaultMemory": 512,
+	"defaultMemory": 512,
 	"description" : "A loopback application that will get you up and running quickly.",
 	"smallIcon" : "powered-by-LB-xs.png",
 	"icon" : "powered-by-LB-xs.png",
@@ -20,8 +20,8 @@
 	},
 	"source" : {
 		"scmType" : "git",
-		"url" : "https://github.com/rvennam/loopback-example-app.git",
-		"appPath" : ""
+		"url" : "https://github.com/strongloop-bluemix/boilerplates.git",
+		"appPath" : "loopbackStarter"
 	},
 	"docURL": "/#starters/nodejs/index.html#nodejs"
 
