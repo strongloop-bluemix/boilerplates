@@ -4,7 +4,7 @@
 	"type" : "web",
 	"version" : "1.0",
     "defaultMemory": 512,
-	"description" : "An Arc application that will get you up and running quickly.",
+	"description" : "This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.",
 	"smallIcon" : "arc.png",
 	"icon" : "arc.png",
 	"largeIcon" : "arc.png",
