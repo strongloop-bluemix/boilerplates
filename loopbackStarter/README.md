@@ -1,5 +1,5 @@
 ## Bluemix LoopBack Sample Starter application
-IBM® Bluemix™ provides a StrongLoop LoopBack Starter app. This boilerplate gets you started with a sample Node.js app that uses the StrongLoop Process Manager to start and supervise a LoopBack app. You can add your own APIs and push the changes back to the Bluemix environment. 
+Launch a sample StrongLoop LoopBack Starter app on IBM® Bluemix™. This boilerplate gets you started with a sample Node.js app that uses the StrongLoop Process Manager to start and supervise a LoopBack app. You can add your own APIs and push the changes back to the Bluemix environment. 
 
 1. [Install the cf command-line tool](https://www.ng.bluemix.net/docs/cli/downloads.html).
 2. Using cf, connect and login to Bluemix with your credentials.
@@ -55,7 +55,8 @@ or
   ```
     slc arc
   ```
-3. When prompted, log in to StrongLoop.
-4. In the Arc module selector, navigate to Process Manager.
-5. Add your app's route, `<your_app_name>-pm.mybluemix.net`, with port 80 to the process manager.
-6. Click Activate and use the process manager's tracing, metrics, and profiler to get information about your app as it runs on Bluemix. See Operating Node applications in the StrongLoop documentation for more information.
+  
+  * When prompted, log in to StrongLoop.
+  * In the Arc module selector, navigate to Process Manager.
+  * Add your app's route, `<your_app_name>-pm.mybluemix.net`, with port 80 to the process manager.
+  * Click Activate and use the process manager's tracing, metrics, and profiler to get information about your app as it runs on Bluemix. See [Operating Node applications](https://docs.strongloop.com/display/SLC/Operating+Node+applications) in the StrongLoop documentation for more information.

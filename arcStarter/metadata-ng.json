@@ -25,6 +25,7 @@
 		"url" : "https://github.com/strongloop-bluemix/boilerplates.git",
 		"appPath" : "arcStarter"
 	},
-	"docURL": "/#starters/nodejs/index.html#nodejs"
+	"docURL": "/#starters/StrongLoopArc/index.html"
+
 
 }

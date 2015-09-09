@@ -40,6 +40,7 @@
     "url": "https://github.com/strongloop/loopback-example-app/blob/master/LICENSE"
   },
   "scripts": {
+    "postinstall": "cd strong-resources && npm install",
     "test": "mocha -R spec server/test",
     "pretest": "jshint .",
     "start": "node ."
