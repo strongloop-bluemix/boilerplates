@@ -3,7 +3,7 @@
 	"services" : [],
 	"type" : "web",
 	"version" : "1.0",
-	"defaultMemory": 768,
+	"defaultMemory": 1024,
 	"description" : "This is a sample StrongLoop LoopBack Node.js application, powered by the open-source LoopBack framework used to compose APIs.",
 	"smallIcon" : "powered-by-LB-xs.png",
 	"icon" : "powered-by-LB-xs.png",
