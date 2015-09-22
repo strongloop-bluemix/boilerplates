@@ -1,31 +1,73 @@
 {
-	"name" : "StrongLoop Arc",
-	"services" : [],
-	"type" : "web",
-	"version" : "1.0",
+    "name": "StrongLoop Arc",
+    "services": [],
+    "type": "web",
+    "version": "1.0",
     "defaultMemory": 512,
-	"description" : "This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.",
-	"smallIcon" : "arc.png",
-	"icon" : "arc.png",
-	"largeIcon" : "arc.png",
-	"featuredIcon" : "arc.png",
-	"system_tags": ["ibm_created"],
-    "categories": ["boilerplate"],
+    "description": "This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.",
+    "extra": {
+        "i18n": {
+            "de": {
+                "name": "StrongLoop Arc",
+                "description": "Bei dieser Anwendung handelt es sich um die grafische Benutzerschnittstelle 'StrongLoop Arc'; sie umfasst Tools für die Erstellung, die Profilerstellung und die Überwachung von Node-Apps."
+            },
+            "es": {
+                "name": "StrongLoop Arc",
+                "description": "Esta aplicación es la IU gráfica de StrongLoop Arc, que incluye herramientas para crear, perfilar y supervisar apps Node. "
+            },
+            "fr": {
+                "name": "StrongLoop Arc",
+                "description": "Cette application est l'interface graphique de StrongLoop Arc, qui inclut des outils de génération, de profilage et de surveillance des applications Node. "
+            },
+            "it": {
+                "name": "StrongLoop Arc",
+                "description": "Questa applicazione è l'IU grafica di StrongLoop Arc, che include strumenti per la creazione, la profilatura e il monitoraggio delle applicazioni Node."
+            },
+            "ja": {
+                "name": "StrongLoop Arc",
+                "description": "このアプリケーションは、Node アプリのビルド、プロファイル作成、およびモニターを行うためのツールを含んでいる、StrongLoop Arc グラフィカル UI です。"
+            },
+            "pt-BR": {
+                "name": "StrongLoop Arc",
+                "description": "Este aplicativo é a IU gráfica do StrongLoop Arc, que inclui ferramentas para construir, criar perfil e monitorar aplicativos de Nó."
+            },
+            "zh-Hans": {
+                "name": "StrongLoop Arc",
+                "description": "此应用程序是 StrongLoop Arc 图形用户界面，包含用于构建、分析和监视 Node 应用程序的工具。"
+            },
+            "zh-Hant": {
+                "name": "StrongLoop Arc",
+                "description": "這個應用程式是 StrongLoop Arc 圖形使用者介面，它包含用來建置、側寫及監視 Node 應用程式的工具。"
+            },
+            "ko": {
+                "name": "StrongLoop Arc",
+                "description": "이 애플리케이션은 StrongLoop Arc 그래픽 UI이며, 여기에는 노드 앱의 빌드, 프로파일링 및 모니터링 도구가 포함됩니다. "
+            }
+        }
+    },
+    "smallIcon": "arc.png",
+    "icon": "arc.png",
+    "largeIcon": "arc.png",
+    "featuredIcon": "arc.png",
+    "system_tags": [
+        "ibm_created"
+    ],
+    "categories": [
+        "boilerplate"
+    ],
     "runtime_id": "763dcb4a-8642-4676-ae17-ca5bd032ad9e",
-	"runtime_template_id": "nodejsHelloWorld", 
-	"runtime": {
+    "runtime_template_id": "nodejsHelloWorld",
+    "runtime": {
         "name": "SDK for Node.js™"
     },
     "metadata": {
         "termsUrl": "https://www.ibm.com/software/sla/sladb.nsf/sla/bm-6622-01",
-		"bssRuntimeName": "sdk-for-nodejs"
+        "bssRuntimeName": "sdk-for-nodejs"
     },
-	"source" : {
-		"scmType" : "git",
-		"url" : "https://github.com/strongloop-bluemix/boilerplates.git",
-		"appPath" : "arcStarter"
-	},
-	"docURL": "/#starters/StrongLoopArc/index.html"
-
-
+    "source": {
+        "scmType": "git",
+        "url": "https://github.com/strongloop-bluemix/boilerplates.git",
+        "appPath": "arcStarter"
+    },
+    "docURL": "/#starters/StrongLoopArc/index.html"
 }
