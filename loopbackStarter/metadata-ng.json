@@ -9,11 +9,11 @@
     "i18n": {
         "de": {
             "name": "LoopBack Starter",
-            "description": "Hierbei handelt es sich um eine beispielhafte StrongLoop-Node.js-Anwendung 'LoopBack', die vom Open-Source-Framework LoopBack angetrieben wird und für die Erstellung von APIs genutzt wird."
+            "description": "Hierbei handelt es sich um eine beispielhafte StrongLoop LoopBack Node.js-Anwendung, die das zur Erstellung von APIs genutzte Open-Source-Framework LoopBack verwendet."
         },
         "es": {
             "name": "LoopBack Starter",
-            "description": "Es una aplicación Node.js de StrongLoop LoopBack de ejemplo, basada en la infraestructura de código abierto LoopBack utilizada para crear API. "
+            "description": "Es una aplicación Node.js de StrongLoop LoopBack de ejemplo, basada en la infraestructura de código abierto LoopBack utilizada para crear las API."
         },
         "fr": {
             "name": "LoopBack Starter",
@@ -32,15 +32,15 @@
             "description": "Este é um aplicativo de amostra do StrongLoop LoopBack Node.js, desenvolvido com a estrutura LoopBack de software livre usada para editar APIs."
         },
         "zh-Hans": {
-            "name": "LoopBack 入门模板",
-            "description": "这是一个基于开放式源代码 LoopBack 框架（用于编写 API）的 StrongLoop LoopBack Node.js 应用程序示例。"
+            "name": "LoopBack Starter",
+            "description": "这是一个基于开放式源代码 LoopBack 框架（用于编写 API）的样本 StrongLoop LoopBack Node.js 应用程序。"
         },
         "zh-Hant": {
             "name": "LoopBack 入門範本",
-            "description": "這是範例 StrongLoop LoopBack Node.js 應用程式，它採用開放程式碼 LoopBack 架構來編寫 API。"
+            "description": "這是範例 StrongLoop LoopBack Node.js 應用程式，它採用開放原始碼 LoopBack 架構來編寫 API。"
         },
         "ko": {
-            "name": "Node.js Cloudant DB 웹 스타터",
+            "name": "LoopBack Starter",
             "description": "API를 작성하는 데 사용된 오픈 소스 LoopBack 프레임워크를 이용한 샘플 StrongLoop LoopBack Node.js 애플리케이션입니다. "
         }
     }
