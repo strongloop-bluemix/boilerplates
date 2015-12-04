@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Arc as an App",
   "dependencies": {
-    "strong-arc": "^1.8.1"
+    "strong-arc": "1.8.3"
   },
   "devDependencies": {},
   "scripts": {
