@@ -5,6 +5,9 @@
   "dependencies": {
     "strong-arc": "1.8.3"
   },
+  "engines": {
+    "node": "0.12.*"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
