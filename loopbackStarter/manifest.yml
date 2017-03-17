@@ -3,8 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: loopback-example-bluemix
-  host: loopback-example-bluemix
+  name: loopback-example-app
+  host: loopback-example-app
   disk_quota: 1024M
 env:
   NODE_ENV: bluemix
