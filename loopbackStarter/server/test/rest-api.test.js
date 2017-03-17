@@ -1,4 +1,9 @@
 /*global describe, it, before */
+
+// Simulate Bluemix env
+process.env.NODE_ENV = 'bluemix';
+process.env.VCAP_SERVICES= '{"compose-for-mongodb":[{"credentials":{"db_type":"mongodb","name":"","uri_cli":"","ca_certificate_base64":"","deployment_id":"","uri":""},"syslog_drain_url":null,"label":"compose-for-mongodb","provider":null,"plan":"Standard","name":"loopback-mongodb-starter","tags":["big_data","data_management","ibm_created"]}]}';
+
 /**
  * REST API Tests
  */
@@ -109,14 +114,14 @@ describe('REST', function() {
     describe('GET /api/locations/nearby', function() {
       it('should return a list of locations near given point', function(done) {
         var url = '/api/locations/nearby?' +
-          'here[lat]=37.7883415&here[lng]=-122.4209035';
+          'here[lat]=37.587409&here[lng]=-122.338225';
         json('get', url)
           .expect(200, function(err, res) {
             var locations = res.body;
             assert(Array.isArray(locations));
-            assert.equal(locations[0].name, 'City Rent-a-Car');
+            assert.equal(locations[0].name, 'National Car Rental');
             assert.equal(locations[0].city, 'San Francisco');
-            assert.equal(locations.length, 10);
+            assert.equal(locations.length, 2);
             locations.forEach(function(l) {
               assert(l.geo);
               assert.equal(typeof l.geo.lat, 'number');
@@ -130,7 +135,7 @@ describe('REST', function() {
     describe('GET /api/locations/:id/inventory', function() {
       it('should return a list of inventory for the given location id',
         function(done) {
-          json('get', '/api/locations/88/inventory')
+          json('get', '/api/locations/80/inventory')
             .expect(200, function(err, res) {
               var inventory = res.body;
               inventory.forEach(function(inv) {

@@ -27,15 +27,29 @@ module.exports = function(app, cb) {
         cb(err);
         return;
       }
-      async.eachLimit(data, 32, function(d, callback) {
+      var indexCounter = 0;
+      (function createModel(index) {
+        var d = data[index];
         if (ids[Model.modelName] === undefined) {
           // The Oracle data has Location with ids over 80
           // and the index.html depends on location 88 being present
           ids[Model.modelName] = 80;
         }
         d.id = ids[Model.modelName]++;
-        Model.create(d, callback);
-      }, cb);
+        Model.create(d, function(err) {
+          if (err) {
+            return cb(err);
+          }
+          indexCounter++;
+          if (indexCounter < data.length) {
+            setTimeout(function() {
+              createModel(indexCounter);
+            }, 1000)
+          } else {
+            return cb();
+          }
+        });
+      })(indexCounter);
     });
   }
 

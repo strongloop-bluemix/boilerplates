@@ -1,4 +1,4 @@
-**NOTE: This app has not been fully migrated to LoopBack 2.0**
+[![Create Toolchain](https://console.ng.bluemix.net/devops/graphics/create_toolchain_button.png)](https://console.ng.bluemix.net/devops/setup/deploy/)
 
 ## Prerequisites
 
@@ -11,6 +11,17 @@ $ npm install -g strongloop
 
 If you run into any issues, see [Installing StrongLoop](http://docs.strongloop.com/display/LB/Installing+StrongLoop)
 for more information.
+
+You must have already installed the [Cloud Foundry Command Line Interface (cf CLI)](https://docs.cloudfoundry.org/cf-cli/) for deploying the app to Bluemix.
+
+## Deployment
+
+- Modify `manifest.yml` and `package.json` to replace "loopback-starter-app" with a unique name for your app instance.
+- Create a MongoDB service:
+```
+cf create-service compose-for-mongodb Standard mongodb-starter
+```
+- Push the app to Bluemix using `cf push`
 
 ## i-Car Rentals Corp
 
@@ -58,8 +69,8 @@ is available and if so, confirms the reservation.
  - `/cars/nearby?id=24&zip=94555` returns nearby cars of id 24.
  - `/cars/:id` returns a specific car from the inventory, with specific
     pricing and images
- - `/users/login` allows a customer to login
- - `/users/logout` allows a customer to logout
+ - `/customers/login` allows a customer to login
+ - `/customers/logout` allows a customer to logout
 
 ## Configuring the data source
 
