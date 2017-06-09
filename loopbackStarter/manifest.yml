@@ -1,0 +1,11 @@
+path: .
+memory: 256M
+instances: 1
+domain: mybluemix.net
+name: loopback-starter-app
+host: loopback-starter-app
+disk_quota: 256M
+services:
+- mongodb-starter
+env:
+  NODE_ENV: bluemix

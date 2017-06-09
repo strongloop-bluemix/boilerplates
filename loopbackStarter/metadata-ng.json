@@ -1,9 +1,12 @@
 {
 	"name" : "LoopBack Starter",
-	"services" : [],
+	"services": [{
+		"name": "compose-for-mongodb",
+		"choices": ["Standard"]
+    }],
 	"type" : "web",
 	"version" : "1.0",
-	"defaultMemory": 1024,
+	"defaultMemory": 256,
 	"description" : "This is a sample StrongLoop LoopBack Node.js application, powered by the open source LoopBack framework used to compose APIs.",
   "extra": {
     "i18n": {

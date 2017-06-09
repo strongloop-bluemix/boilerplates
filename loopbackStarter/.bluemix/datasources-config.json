@@ -1,0 +1,17 @@
+{
+  "datasources": {
+    "mongodb-starter": {
+      "name": "mongodb-starter",
+      "connector": "mongodb",
+      "database": "starter"
+    }
+  },
+  "supportedServices": {
+    "cloudant": {
+      "label": "cloudantNoSQLDB"
+    },
+    "mongodb": {
+      "label": "compose-for-mongodb"
+    }
+  }
+}

@@ -6,34 +6,41 @@
     ]
   },
   "AccessToken": {
-    "dataSource": "db",
-    "public": false
+    "dataSource": "mongodb-starter",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Customer",
+        "foreignKey": "customerId"
+      }
+    }
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongodb-starter",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongodb-starter",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongodb-starter",
     "public": false
   },
   "Car": {
-    "dataSource": "db"
+    "dataSource": "mongodb-starter"
   },
   "Customer": {
-    "dataSource": "db"
+    "dataSource": "mongodb-starter"
   },
   "Inventory": {
-    "dataSource": "db"
+    "dataSource": "mongodb-starter"
   },
   "Location": {
-    "dataSource": "db"
+    "dataSource": "mongodb-starter"
   },
   "Note": {
-    "dataSource": "db"
+    "dataSource": "mongodb-starter"
   }
 }
