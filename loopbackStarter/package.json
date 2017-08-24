@@ -23,8 +23,7 @@
   },
   "optionalDependencies": {
     "loopback-connector-mysql": "^1.2.1",
-    "loopback-connector-mongodb": "^1.2.5",
-    "loopback-connector-oracle": "^1.2.1"
+    "loopback-connector-mongodb": "^1.2.5"
   },
   "devDependencies": {
     "jshint": "^2.7.0",
